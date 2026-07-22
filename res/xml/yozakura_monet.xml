@@ -9,6 +9,14 @@
     android:title="@string/yozakura_monet_title">
 
     <ListPreference
+        android:key="monet_accent_preset"
+        android:title="@string/yozakura_monet_accent_title"
+        android:summary="@string/yozakura_monet_accent_summary"
+        android:entries="@array/yozakura_monet_accent_entries"
+        android:entryValues="@array/yozakura_monet_accent_values"
+        android:defaultValue="dynamic" />
+
+    <ListPreference
         android:key="monet_theme_style"
         android:title="@string/yozakura_monet_style_title"
         android:summary="@string/yozakura_monet_style_summary"

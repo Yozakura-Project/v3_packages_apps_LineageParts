@@ -861,4 +861,26 @@
         <item>+30% (明るめ)</item>
     </string-array>
 
+    <!-- YozakuraOS cp79: Monet accent preset -->
+    <string-array name="yozakura_monet_accent_entries" translatable="false">
+        <item>ダイナミック (壁紙)</item>
+        <item>夜桜ピンク</item>
+        <item>ブルー</item>
+        <item>レッド</item>
+        <item>グリーン</item>
+        <item>パープル</item>
+        <item>オレンジ</item>
+        <item>ティール</item>
+    </string-array>
+    <string-array name="yozakura_monet_accent_values" translatable="false">
+        <item>dynamic</item>
+        <item>ff4081</item>
+        <item>1b6ef3</item>
+        <item>f31b1b</item>
+        <item>1bcc3a</item>
+        <item>9c27b0</item>
+        <item>ff9800</item>
+        <item>009688</item>
+    </string-array>
+
 </resources>

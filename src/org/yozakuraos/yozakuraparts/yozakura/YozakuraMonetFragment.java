@@ -34,6 +34,15 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
 
     private static final String OVERLAY_THEME_STYLE =
             "android.theme.customization.theme_style";
+    private static final String OVERLAY_ACCENT_COLOR =
+            "android.theme.customization.accent_color";
+    private static final String OVERLAY_SYSTEM_PALETTE =
+            "android.theme.customization.system_palette";
+    private static final String OVERLAY_COLOR_SOURCE =
+            "android.theme.customization.color_source";
+    private static final String COLOR_SOURCE_PRESET = "preset";
+    private static final String COLOR_SOURCE_WALLPAPER = "home_wallpaper";
+    private static final String VALUE_DYNAMIC = "dynamic";
     private static final String OVERLAY_LUMINANCE_FACTOR =
             "android.theme.customization.luminance_factor";
     private static final String OVERLAY_CHROMA_FACTOR =
@@ -44,12 +53,14 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
             "android.theme.customization.tint_background";
     private static final String TIMESTAMP_FIELD = "_applied_timestamp";
 
+    private static final String PREF_ACCENT = "monet_accent_preset";
     private static final String PREF_STYLE = "monet_theme_style";
     private static final String PREF_LUMINANCE = "monet_luminance_factor";
     private static final String PREF_CHROMA = "monet_chroma_factor";
     private static final String PREF_WHOLE_PALETTE = "monet_whole_palette";
     private static final String PREF_TINT_BACKGROUND = "monet_tint_background";
 
+    private ListPreference mAccentPref;
     private ListPreference mStylePref;
     private ListPreference mLuminancePref;
     private ListPreference mChromaPref;
@@ -62,6 +73,7 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.yozakura_monet);
         getActivity().setTitle(R.string.yozakura_monet_title);
 
+        mAccentPref = findPreference(PREF_ACCENT);
         mStylePref = findPreference(PREF_STYLE);
         mLuminancePref = findPreference(PREF_LUMINANCE);
         mChromaPref = findPreference(PREF_CHROMA);
@@ -72,10 +84,12 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
         // summary without ListPreference running String.format() over it. Some
         // entries contain a literal '%' (e.g. "+15%"), which would otherwise crash
         // getSummary() with UnknownFormatConversionException.
+        mAccentPref.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance());
         mStylePref.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance());
         mLuminancePref.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance());
         mChromaPref.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance());
 
+        mAccentPref.setOnPreferenceChangeListener(this);
         mStylePref.setOnPreferenceChangeListener(this);
         mLuminancePref.setOnPreferenceChangeListener(this);
         mChromaPref.setOnPreferenceChangeListener(this);
@@ -119,6 +133,13 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
     private void load() {
         final JSONObject object = getJson();
 
+        final String source = object.optString(OVERLAY_COLOR_SOURCE, COLOR_SOURCE_WALLPAPER);
+        if (COLOR_SOURCE_PRESET.equals(source)) {
+            setAccentValue(object.optString(OVERLAY_ACCENT_COLOR, ""));
+        } else {
+            setListValue(mAccentPref, VALUE_DYNAMIC);
+        }
+
         final String style = object.optString(OVERLAY_THEME_STYLE, "TONAL_SPOT");
         setListValue(mStylePref, style);
 
@@ -127,6 +148,19 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
 
         mWholePalettePref.setChecked(object.optInt(OVERLAY_WHOLE_PALETTE, 0) == 1);
         mTintBackgroundPref.setChecked(object.optInt(OVERLAY_TINT_BACKGROUND, 0) == 1);
+    }
+
+    /** Select the preset whose hex matches the stored accent color, else Dynamic. */
+    private void setAccentValue(String hex) {
+        if (!TextUtils.isEmpty(hex)) {
+            for (CharSequence v : mAccentPref.getEntryValues()) {
+                if (v.toString().equalsIgnoreCase(hex)) {
+                    setListValue(mAccentPref, v.toString());
+                    return;
+                }
+            }
+        }
+        setListValue(mAccentPref, VALUE_DYNAMIC);
     }
 
     private void setListValue(ListPreference pref, String value) {
@@ -161,7 +195,21 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final JSONObject object = getJson();
         try {
-            if (preference == mStylePref) {
+            if (preference == mAccentPref) {
+                final String value = (String) newValue;
+                if (VALUE_DYNAMIC.equals(value)) {
+                    object.remove(OVERLAY_ACCENT_COLOR);
+                    object.remove(OVERLAY_SYSTEM_PALETTE);
+                    object.putOpt(OVERLAY_COLOR_SOURCE, COLOR_SOURCE_WALLPAPER);
+                } else {
+                    object.putOpt(OVERLAY_ACCENT_COLOR, value);
+                    object.putOpt(OVERLAY_SYSTEM_PALETTE, value);
+                    object.putOpt(OVERLAY_COLOR_SOURCE, COLOR_SOURCE_PRESET);
+                }
+                putJson(object);
+                setListValue(mAccentPref, value);
+                return true;
+            } else if (preference == mStylePref) {
                 final String value = (String) newValue;
                 object.putOpt(OVERLAY_THEME_STYLE, value);
                 putJson(object);

@@ -769,4 +769,8 @@
     <string name="yozakura_monet_tint_background_title">背景を着色</string>
     <string name="yozakura_monet_tint_background_summary">背景・サーフェス面をアクセント色で淡く着色</string>
 
+    <!-- YozakuraOS cp79: Monet accent preset -->
+    <string name="yozakura_monet_accent_title">アクセント色</string>
+    <string name="yozakura_monet_accent_summary">壁紙から自動生成、またはプリセット色を選択</string>
+
 </resources>
