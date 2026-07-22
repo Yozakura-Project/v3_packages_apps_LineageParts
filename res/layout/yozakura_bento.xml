@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="8dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/yozakura_tile_statusbar"
+            android:layout_width="0dp"
+            android:layout_height="146dp"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/yozakura_tile_bg"
+            android:clipToOutline="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+            <ImageView android:layout_width="34dp" android:layout_height="34dp"
+                android:layout_gravity="start|top" android:layout_margin="16dp"
+                android:src="@drawable/ic_yozakura_statusbar" android:tint="#FFFFFF"
+                android:contentDescription="@null"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom" android:layout_margin="16dp"
+                android:text="@string/yozakura_statusbar_category"
+                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/yozakura_tile_clock"
+            android:layout_width="0dp"
+            android:layout_height="146dp"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/yozakura_tile_bg"
+            android:clipToOutline="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+            <ImageView android:layout_width="34dp" android:layout_height="34dp"
+                android:layout_gravity="start|top" android:layout_margin="16dp"
+                android:src="@drawable/ic_yozakura_clock" android:tint="#FFFFFF"
+                android:contentDescription="@null"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom" android:layout_margin="16dp"
+                android:text="@string/yozakura_clock_category"
+                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/yozakura_tile_lockscreen"
+            android:layout_width="0dp"
+            android:layout_height="146dp"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/yozakura_tile_bg"
+            android:clipToOutline="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+            <ImageView android:layout_width="34dp" android:layout_height="34dp"
+                android:layout_gravity="start|top" android:layout_margin="16dp"
+                android:src="@drawable/ic_yozakura_lockscreen" android:tint="#FFFFFF"
+                android:contentDescription="@null"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom" android:layout_margin="16dp"
+                android:text="@string/yozakura_lockscreen_category"
+                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/yozakura_tile_power"
+            android:layout_width="0dp"
+            android:layout_height="146dp"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/yozakura_tile_bg"
+            android:clipToOutline="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+            <ImageView android:layout_width="34dp" android:layout_height="34dp"
+                android:layout_gravity="start|top" android:layout_margin="16dp"
+                android:src="@drawable/ic_yozakura_power" android:tint="#FFFFFF"
+                android:contentDescription="@null"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom" android:layout_margin="16dp"
+                android:text="@string/yozakura_power_category"
+                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/yozakura_tile_misc"
+            android:layout_width="0dp"
+            android:layout_height="146dp"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/yozakura_tile_bg"
+            android:clipToOutline="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+            <ImageView android:layout_width="34dp" android:layout_height="34dp"
+                android:layout_gravity="start|top" android:layout_margin="16dp"
+                android:src="@drawable/ic_yozakura_misc" android:tint="#FFFFFF"
+                android:contentDescription="@null"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom" android:layout_margin="16dp"
+                android:text="@string/yozakura_misc_category"
+                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/yozakura_tile_display"
+            android:layout_width="0dp"
+            android:layout_height="146dp"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/yozakura_tile_bg"
+            android:clipToOutline="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+            <ImageView android:layout_width="34dp" android:layout_height="34dp"
+                android:layout_gravity="start|top" android:layout_margin="16dp"
+                android:src="@drawable/ic_yozakura_display" android:tint="#FFFFFF"
+                android:contentDescription="@null"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom" android:layout_margin="16dp"
+                android:text="@string/yozakura_display_category"
+                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+        </FrameLayout>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="146dp"
+            android:layout_weight="1"
+            android:layout_margin="6dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="yozakura_display"
+    android:title="@string/yozakura_display_category">
+
+    <!-- YozakuraOS cp73: gather display customization under the Yozakura display tile -->
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.livedisplay.LiveDisplaySettings"
+        android:key="livedisplay"
+        android:title="@*lineageos.platform:string/live_display_title" />
+
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.hardware.DisplayRotation"
+        android:key="rotation"
+        android:title="@string/display_rotation_title" />
+
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.applications.LongScreenSettings"
+        android:key="long_screen_settings"
+        android:title="@string/long_screen_settings_title" />
+
+</PreferenceScreen>

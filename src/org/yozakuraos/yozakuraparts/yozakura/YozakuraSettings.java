@@ -41,6 +41,8 @@ public class YozakuraSettings extends SettingsPreferenceFragment {
                 PKG + ".yozakura.YozakuraPowerFragment");
         setTileClick(bento, R.id.yozakura_tile_misc,
                 PKG + ".yozakura.YozakuraMiscFragment");
+        setTileClick(bento, R.id.yozakura_tile_display,
+                PKG + ".yozakura.YozakuraDisplayFragment");
     }
 
     private void setTileClick(LayoutPreference bento, int id, final String fragment) {
