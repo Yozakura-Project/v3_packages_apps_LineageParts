@@ -68,6 +68,14 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
         mWholePalettePref = findPreference(PREF_WHOLE_PALETTE);
         mTintBackgroundPref = findPreference(PREF_TINT_BACKGROUND);
 
+        // Use the built-in summary provider so the selected entry is shown as the
+        // summary without ListPreference running String.format() over it. Some
+        // entries contain a literal '%' (e.g. "+15%"), which would otherwise crash
+        // getSummary() with UnknownFormatConversionException.
+        mStylePref.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance());
+        mLuminancePref.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance());
+        mChromaPref.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance());
+
         mStylePref.setOnPreferenceChangeListener(this);
         mLuminancePref.setOnPreferenceChangeListener(this);
         mChromaPref.setOnPreferenceChangeListener(this);
@@ -126,7 +134,6 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
         int index = pref.findIndexOfValue(value);
         if (index < 0) index = 0;
         pref.setValueIndex(index);
-        pref.setSummary(pref.getEntries()[index]);
     }
 
     /** Pick the entry whose numeric value is closest to the stored factor. */
@@ -148,7 +155,6 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
             }
         }
         pref.setValueIndex(best);
-        pref.setSummary(pref.getEntries()[best]);
     }
 
     @Override
