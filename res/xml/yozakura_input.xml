@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="yozakura_input"
+    android:title="@string/yozakura_input_category">
+
+    <!-- YozakuraOS cp74: gather input customization under the Yozakura input tile -->
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.input.ButtonSettings"
+        android:key="button_settings"
+        android:title="@string/button_pref_title" />
+
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.gestures.TouchscreenGestureSettings"
+        android:key="touchscreen_gesture_settings"
+        android:title="@string/touchscreen_gesture_settings_title" />
+
+</PreferenceScreen>

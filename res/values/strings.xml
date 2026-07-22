@@ -748,6 +748,7 @@
     <string name="yozakura_clock_style_title">Lock screen clock style</string>
     <string name="yozakura_misc_category">Miscellaneous</string>
     <string name="yozakura_display_category">Display</string>
+    <string name="yozakura_input_category">Input</string>
     <string name="yozakura_black_theme_title">AMOLED pure black theme</string>
     <string name="yozakura_black_theme_summary">Use pure black backgrounds for the dark theme to save power on OLED screens</string>
     <string name="yozakura_volume_left_title">Volume panel on the left</string>
