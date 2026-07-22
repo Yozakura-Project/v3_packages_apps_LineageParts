@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="yozakura_misc"
+    android:title="@string/yozakura_misc_category">
+
+    <lineageos.preference.LineageSecureSettingSwitchPreference
+        android:key="berry_black_theme"
+        android:title="@string/yozakura_black_theme_title"
+        android:summary="@string/yozakura_black_theme_summary"
+        android:defaultValue="false" />
+
+    <lineageos.preference.LineageSecureSettingSwitchPreference
+        android:key="volume_panel_on_left"
+        android:title="@string/yozakura_volume_left_title"
+        android:summary="@string/yozakura_volume_left_summary"
+        android:defaultValue="false" />
+
+    <!-- YozakuraOS cp75: expose remaining LineageParts customization under misc -->
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.notificationlight.NotificationLightSettings"
+        android:key="notification_lights"
+        android:title="@string/notification_light_title" />
+
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.profiles.ProfilesSettings"
+        android:key="profiles_settings"
+        android:title="@string/profiles_settings_title" />
+
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.trust.TrustPreferences"
+        android:key="trust_interface"
+        android:title="@string/trust_title" />
+
+</PreferenceScreen>
