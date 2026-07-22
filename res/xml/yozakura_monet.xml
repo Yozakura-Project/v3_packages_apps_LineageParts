@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The YozakuraOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="yozakura_monet"
+    android:title="@string/yozakura_monet_title">
+
+    <ListPreference
+        android:key="monet_theme_style"
+        android:title="@string/yozakura_monet_style_title"
+        android:summary="@string/yozakura_monet_style_summary"
+        android:entries="@array/yozakura_monet_style_entries"
+        android:entryValues="@array/yozakura_monet_style_values"
+        android:defaultValue="TONAL_SPOT" />
+
+    <ListPreference
+        android:key="monet_chroma_factor"
+        android:title="@string/yozakura_monet_chroma_title"
+        android:summary="@string/yozakura_monet_chroma_summary"
+        android:entries="@array/yozakura_monet_chroma_entries"
+        android:entryValues="@array/yozakura_monet_factor_values"
+        android:defaultValue="1.0" />
+
+    <ListPreference
+        android:key="monet_luminance_factor"
+        android:title="@string/yozakura_monet_luminance_title"
+        android:summary="@string/yozakura_monet_luminance_summary"
+        android:entries="@array/yozakura_monet_luminance_entries"
+        android:entryValues="@array/yozakura_monet_luminance_values"
+        android:defaultValue="1.0" />
+
+    <SwitchPreferenceCompat
+        android:key="monet_whole_palette"
+        android:title="@string/yozakura_monet_whole_palette_title"
+        android:summary="@string/yozakura_monet_whole_palette_summary"
+        android:defaultValue="false" />
+
+    <SwitchPreferenceCompat
+        android:key="monet_tint_background"
+        android:title="@string/yozakura_monet_tint_background_title"
+        android:summary="@string/yozakura_monet_tint_background_summary"
+        android:defaultValue="false" />
+
+</PreferenceScreen>

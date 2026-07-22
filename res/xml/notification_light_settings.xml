@@ -23,7 +23,7 @@
             android:dependency="notification_light_pulse"
             android:defaultValue="true" />
 
-        <org.lineageos.lineageparts.notificationlight.ApplicationLightPreference
+        <org.yozakuraos.yozakuraparts.notificationlight.ApplicationLightPreference
             android:key="default"
             android:title="@string/notification_light_default_value"
             android:persistent="false"
@@ -36,12 +36,12 @@
         android:title="@string/light_brightness_title"
         android:dependency="notification_light_pulse" >
 
-        <org.lineageos.lineageparts.notificationlight.NotificationBrightnessPreference
+        <org.yozakuraos.yozakuraparts.notificationlight.NotificationBrightnessPreference
             android:key="notification_light_brightness_level"
             android:title="@string/notification_light_brightness_normal"
             android:dependency="notification_light_pulse" />
 
-        <org.lineageos.lineageparts.notificationlight.NotificationBrightnessZenPreference
+        <org.yozakuraos.yozakuraparts.notificationlight.NotificationBrightnessZenPreference
             android:key="notification_light_brightness_level_zen"
             android:title="@string/notification_light_brightness_zen"
             android:dependency="notification_light_pulse" />
@@ -68,13 +68,13 @@
         android:key="phone_list"
         android:title="@string/notification_light_phonelist_title" >
 
-        <org.lineageos.lineageparts.notificationlight.ApplicationLightPreference
+        <org.yozakuraos.yozakuraparts.notificationlight.ApplicationLightPreference
             android:key="missed_call"
             android:title="@string/notification_light_missed_call_title"
             android:persistent="false"
             android:dependency="notification_light_pulse_custom_enable" />
 
-        <org.lineageos.lineageparts.notificationlight.ApplicationLightPreference
+        <org.yozakuraos.yozakuraparts.notificationlight.ApplicationLightPreference
             android:key="voicemail"
             android:title="@string/notification_light_voicemail_title"
             android:persistent="false"

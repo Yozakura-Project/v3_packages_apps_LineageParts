@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="yozakura_settings"
+    android:title="@string/yozakura_settings_title">
+
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="yozakura_header"
+        android:layout="@layout/yozakura_header"
+        android:selectable="false" />
+
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="yozakura_bento"
+        android:layout="@layout/yozakura_bento"
+        android:selectable="false" />
+
+</PreferenceScreen>

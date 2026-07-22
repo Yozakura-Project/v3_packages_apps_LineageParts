@@ -18,17 +18,17 @@
         android:entryValues="@array/charging_control_mode_values"
         android:dependency="charging_control_enabled" />
 
-    <org.lineageos.lineageparts.health.StartTimePreference
+    <org.yozakuraos.yozakuraparts.health.StartTimePreference
         android:key="charging_control_start_time"
         android:title="@string/charging_control_start_time_title"
         android:dependency="charging_control_enabled" />
 
-    <org.lineageos.lineageparts.health.TargetTimePreference
+    <org.yozakuraos.yozakuraparts.health.TargetTimePreference
         android:key="charging_control_target_time"
         android:title="@string/charging_control_target_time_title"
         android:dependency="charging_control_enabled" />
 
-    <org.lineageos.lineageparts.health.ChargingLimitPreference
+    <org.yozakuraos.yozakuraparts.health.ChargingLimitPreference
         android:key="charging_control_charging_limit"
         android:title="@string/charging_control_limit_title"
         android:dependency="charging_control_enabled" />

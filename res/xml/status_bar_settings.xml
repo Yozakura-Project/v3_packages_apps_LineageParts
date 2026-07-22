@@ -19,7 +19,7 @@
         android:defaultValue="0" />
 
     <Preference
-        android:fragment="org.lineageos.lineageparts.statusbar.NetworkTrafficSettings"
+        android:fragment="org.yozakuraos.yozakuraparts.statusbar.NetworkTrafficSettings"
         android:key="network_traffic_settings"
         android:title="@string/network_traffic_settings_title"
         android:summary="@string/network_traffic_settings_summary" />

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      SPDX-FileCopyrightText: 2015 The CyanogenMod Project
-     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-FileCopyrightText: The 夜桜OS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineageparts_title">LineageOS の設定</string>
+    <string name="lineageparts_title">夜桜OS の設定</string>
     <string name="loading">読み込み中\u2026</string>
     <string name="dlg_ok">OK</string>
     <string name="cancel">キャンセル</string>
@@ -426,10 +426,10 @@
     <string name="contributions_info_msg"><![CDATA[<b>協力者の合計:</b> <xliff:g id="total_contributors">%1$s</xliff:g><br/><br/>
                  <b>コミットの合計:</b> <xliff:g id="total_commits">%2$s</xliff:g><br/><br/>
                  <b>最終更新:</b> <xliff:g id="date">%3$s</xliff:g>]]></string>
-    <string name="anonymous_statistics_title">LineageOS の統計</string>
-    <string name="anonymous_statistics_summary">匿名の統計のレポートに同意してLineageOSの改善に協力する</string>
+    <string name="anonymous_statistics_title">夜桜OS の統計</string>
+    <string name="anonymous_statistics_summary">匿名の統計のレポートに同意して夜桜OSの改善に協力する</string>
     <string name="anonymous_statistics_warning_title">情報</string>
-    <string name="anonymous_statistics_warning">LineageOSの統計に同意すると、端末間のユニークインストール回数を調べるためにLineageOSの開発者への非個人情報の送信を許可します。送信される情報にはユニークIDが含まれますが、プライバシーや個人データが危険にさらされることはありません。データはブート時に送信されます。\n\n送信されるデータの見本は[データをプレビュー]をタップして確認することができます。</string>
+    <string name="anonymous_statistics_warning">夜桜OSの統計に同意すると、端末間のユニークインストール回数を調べるために夜桜OSの開発者への非個人情報の送信を許可します。送信される情報にはユニークIDが含まれますが、プライバシーや個人データが危険にさらされることはありません。データはブート時に送信されます。\n\n送信されるデータの見本は[データをプレビュー]をタップして確認することができます。</string>
     <string name="enable_reporting_title">レポートを有効化</string>
     <string name="preview_data_title">データをプレビュー</string>
     <string name="view_stats_title">統計を表示</string>
@@ -540,4 +540,65 @@
     <string name="sms_security_check_limit_summary">アプリは確認をする前に1分間に%s通のメッセージを送信できます</string>
     <string name="sms_security_check_limit_summary_none">アプリは許可無くメッセージを送信することはできません</string>
     <string name="sms_security_check_limit_always_confirm">常に確認する</string>
+    <string name="yozakura_settings_title">YozakuraOS</string>
+    <string name="yozakura_settings_summary">夜桜OS の独自機能</string>
+    <string name="yozakura_statusbar_category">ステータスバー</string>
+    <string name="yozakura_statusbar_summary">キャリア名・バッテリーバー</string>
+    <string name="yozakura_clock_category">時計・日付</string>
+    <string name="yozakura_clock_summary">ステータスバーの日付</string>
+    <string name="yozakura_power_category">電源メニュー</string>
+    <string name="yozakura_power_summary">アドバンスド再起動・電源メニューの項目</string>
+    <string name="yozakura_lockscreen_category">ロック画面</string>
+    <string name="yozakura_lockscreen_summary">時計・ロック画面のカスタマイズ</string>
+    <string name="yozakura_ls_double_line_title">2行表示の時計</string>
+    <string name="yozakura_force_large_clock_title">通知があっても大きな時計を維持</string>
+    <string name="yozakura_force_large_clock_summary">通知がある時も大時計を表示し、通知はその下に並べます</string>
+    <string name="yozakura_ls_double_line_summary">通知がないときにロック画面の時計を2行で大きく表示します</string>
+    <string name="yozakura_ls_rotation_title">ロック画面の回転を許可</string>
+    <string name="yozakura_ls_rotation_summary">端末を横向きにするとロック画面も横向きに回転します</string>
+    <string name="yozakura_carrier_label_title">キャリア名を表示</string>
+    <string name="yozakura_carrier_label_summary">ステータスバーにキャリア名を表示します</string>
+    <string name="yozakura_carrier_label_text_title">キャリア名のカスタム表示</string>
+    <string name="yozakura_carrier_label_text_summary">キャリア名の代わりに任意の文字を表示します（空欄でキャリア名）</string>
+    <string name="yozakura_battery_bar_title">バッテリーバー</string>
+    <string name="yozakura_battery_bar_summary">ステータスバーにバッテリー残量バーを表示します</string>
+    <string name="yozakura_battery_bar_position_title">バッテリーバーの位置</string>
+    <string name="yozakura_battery_bar_position_bottom">下</string>
+    <string name="yozakura_battery_bar_position_top">上</string>
+    <string name="yozakura_battery_bar_height_title">バッテリーバーの太さ</string>
+    <string name="yozakura_battery_bar_height_thin">細い</string>
+    <string name="yozakura_battery_bar_height_medium">普通</string>
+    <string name="yozakura_battery_bar_height_thick">太い</string>
+    <string name="yozakura_battery_bar_color_title">バッテリーバーの色</string>
+    <string name="yozakura_battery_bar_color_dynamic">自動（充電/低残量で変化）</string>
+    <string name="yozakura_battery_bar_color_white">白</string>
+    <string name="yozakura_battery_bar_color_accent">アクセント</string>
+    <string name="yozakura_battery_bar_color_red">赤</string>
+    <string name="yozakura_battery_bar_color_green">緑</string>
+    <string name="yozakura_battery_bar_color_blue">青</string>
+    <string name="yozakura_header_title">夜桜OS</string>
+    <string name="yozakura_header_subtitle">YozakuraOS · Android 16</string>
+    <string name="yozakura_clock_date_title">ステータスバーの日付</string>
+    <string name="yozakura_clock_date_off">オフ</string>
+    <string name="yozakura_clock_date_short">小</string>
+    <string name="yozakura_clock_date_long">標準</string>
+    <string name="yozakura_clock_date_format_title">日付の書式</string>
+    <string name="yozakura_clock_date_style_title">日付のスタイル</string>
+    <string name="yozakura_clock_date_style_regular">標準</string>
+    <string name="yozakura_clock_date_style_lower">小文字</string>
+    <string name="yozakura_clock_date_style_upper">大文字</string>
+    <string name="yozakura_clock_date_position_title">日付の位置</string>
+    <string name="yozakura_clock_date_position_left">時刻の左</string>
+    <string name="yozakura_clock_date_position_right">時刻の右</string>
+    <string name="yozakura_qs_columns_title">QSタイルの列数</string>
+    <string name="yozakura_qs_columns_default">システム標準</string>
+    <string name="yozakura_qqs_rows_title">QQSヘッダーの行数</string>
+    <string name="yozakura_clock_style_title">ロック画面の時計スタイル</string>
+    <string name="yozakura_misc_category">その他</string>
+    <string name="yozakura_black_theme_title">AMOLED 純黒テーマ</string>
+    <string name="yozakura_black_theme_summary">ダークテーマの背景を純黒にして有機ELの消費電力を抑えます</string>
+    <string name="yozakura_volume_left_title">音量パネルを左に表示</string>
+    <string name="yozakura_volume_left_summary">音量パネルを画面の左側に表示します</string>
+    <string name="ls_clock_face_highlight_text">左右にスワイプして時計フェイスをプレビューし、適用をタップ</string>
+    <string name="custom_clock_style">時計スタイル</string>
 </resources>

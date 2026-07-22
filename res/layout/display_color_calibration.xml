@@ -4,7 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-		    xmlns:lineage="http://schemas.android.com/apk/res/org.lineageos.lineageparts"
+		    xmlns:lineage="http://schemas.android.com/apk/res/org.yozakuraos.yozakuraparts"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:paddingTop="10dip" />
-        <org.lineageos.lineageparts.widget.IntervalSeekBar
+        <org.yozakuraos.yozakuraparts.widget.IntervalSeekBar
             android:id="@+id/color_red_seekbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
                 android:layout_below="@id/color_red_seekbar"
                 android:layout_alignParentEnd="true"
                 android:paddingTop="10dip" />
-        <org.lineageos.lineageparts.widget.IntervalSeekBar
+        <org.yozakuraos.yozakuraparts.widget.IntervalSeekBar
             android:id="@+id/color_green_seekbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
                 android:layout_below="@id/color_green_seekbar"
                 android:layout_alignParentEnd="true"
                 android:paddingTop="10dip" />
-        <org.lineageos.lineageparts.widget.IntervalSeekBar
+        <org.yozakuraos.yozakuraparts.widget.IntervalSeekBar
             android:id="@+id/color_blue_seekbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

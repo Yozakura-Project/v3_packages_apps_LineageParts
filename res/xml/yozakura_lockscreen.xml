@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="yozakura_lockscreen"
+    android:title="@string/yozakura_lockscreen_category">
+
+    <lineageos.preference.SecureSettingSwitchPreference
+        android:key="lockscreen_use_double_line_clock"
+        android:title="@string/yozakura_ls_double_line_title"
+        android:summary="@string/yozakura_ls_double_line_summary"
+        android:defaultValue="true" />
+
+    <lineageos.preference.SecureSettingSwitchPreference
+        android:key="yozakura_force_large_clock"
+        android:title="@string/yozakura_force_large_clock_title"
+        android:summary="@string/yozakura_force_large_clock_summary"
+        android:defaultValue="false" />
+
+    <Preference
+        android:key="lock_clock_preview"
+        android:title="@string/custom_clock_style"
+        android:fragment="org.yozakuraos.yozakuraparts.yozakura.CustomClockPreview" />
+
+    <org.yozakuraos.yozakuraparts.preference.SecureSettingListPreference
+        android:key="lock_screen_custom_clock_style"
+        android:title="@string/yozakura_clock_style_title"
+        android:summary="%s"
+        android:entries="@array/yozakura_clock_style_entries"
+        android:entryValues="@array/yozakura_clock_style_values"
+        android:defaultValue="0" />
+
+    <lineageos.preference.LineageSystemSettingSwitchPreference
+        android:key="lockscreen_rotation"
+        android:title="@string/yozakura_ls_rotation_title"
+        android:summary="@string/yozakura_ls_rotation_summary"
+        android:defaultValue="false" />
+
+</PreferenceScreen>

@@ -18,6 +18,6 @@
 
     <Preference
         android:title="@string/preview_data_title"
-        android:fragment="org.lineageos.lineageparts.lineagestats.PreviewData" />
+        android:fragment="org.yozakuraos.yozakuraparts.lineagestats.PreviewData" />
 
 </PreferenceScreen>

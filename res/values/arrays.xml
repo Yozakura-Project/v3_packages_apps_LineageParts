@@ -507,4 +507,358 @@
         <item>1</item>
         <item>0</item>
     </string-array>
+    <string-array name="yozakura_battery_bar_position_entries">
+        <item>@string/yozakura_battery_bar_position_bottom</item>
+        <item>@string/yozakura_battery_bar_position_top</item>
+    </string-array>
+    <string-array name="yozakura_battery_bar_position_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="yozakura_battery_bar_height_entries">
+        <item>@string/yozakura_battery_bar_height_thin</item>
+        <item>@string/yozakura_battery_bar_height_medium</item>
+        <item>@string/yozakura_battery_bar_height_thick</item>
+    </string-array>
+    <string-array name="yozakura_battery_bar_height_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="yozakura_battery_bar_color_entries">
+        <item>@string/yozakura_battery_bar_color_dynamic</item>
+        <item>@string/yozakura_battery_bar_color_white</item>
+        <item>@string/yozakura_battery_bar_color_accent</item>
+        <item>@string/yozakura_battery_bar_color_red</item>
+        <item>@string/yozakura_battery_bar_color_green</item>
+        <item>@string/yozakura_battery_bar_color_blue</item>
+    </string-array>
+    <string-array name="yozakura_battery_bar_color_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="yozakura_clock_date_entries">
+        <item>@string/yozakura_clock_date_off</item>
+        <item>@string/yozakura_clock_date_short</item>
+        <item>@string/yozakura_clock_date_long</item>
+    </string-array>
+    <string-array name="yozakura_clock_date_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="yozakura_clock_date_format_entries" translatable="false">
+        <item>Wed</item>
+        <item>Wed 15</item>
+        <item>Wed, Jul 15</item>
+        <item>Wed Jul 15</item>
+        <item>Wed 15 Jul</item>
+        <item>Wed July 15</item>
+        <item>Wed 15/07</item>
+        <item>Wed 07/15</item>
+        <item>Wednesday 15/07</item>
+        <item>Wednesday 07/15</item>
+        <item>Jul 15</item>
+        <item>Jul 15, 2026</item>
+        <item>July 15, 2026</item>
+        <item>15 Jul</item>
+        <item>15/07/26</item>
+        <item>07/15/26</item>
+        <item>15-07-2026</item>
+        <item>07-15-2026</item>
+        <item>2026-07-15</item>
+        <item>2026-15-07</item>
+        <item>2026/07/15</item>
+    </string-array>
+    <string-array name="yozakura_clock_date_format_values" translatable="false">
+        <item>EEE</item>
+        <item>EEE dd</item>
+        <item>EEE, MMM d</item>
+        <item>EEE MMM dd</item>
+        <item>EEE dd MMM</item>
+        <item>EEE MMMM dd</item>
+        <item>EEE dd/MM</item>
+        <item>EEE MM/dd</item>
+        <item>EEEE dd/MM</item>
+        <item>EEEE MM/dd</item>
+        <item>MMM dd</item>
+        <item>MMM dd, yyyy</item>
+        <item>MMMM dd, yyyy</item>
+        <item>d MMM</item>
+        <item>dd/MM/yy</item>
+        <item>MM/dd/yy</item>
+        <item>dd-MM-yyyy</item>
+        <item>MM-dd-yyyy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy-dd-MM</item>
+        <item>yyyy/MM/dd</item>
+    </string-array>
+    <string-array name="yozakura_clock_date_style_entries">
+        <item>@string/yozakura_clock_date_style_regular</item>
+        <item>@string/yozakura_clock_date_style_lower</item>
+        <item>@string/yozakura_clock_date_style_upper</item>
+    </string-array>
+    <string-array name="yozakura_clock_date_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="yozakura_clock_date_position_entries">
+        <item>@string/yozakura_clock_date_position_left</item>
+        <item>@string/yozakura_clock_date_position_right</item>
+    </string-array>
+    <string-array name="yozakura_clock_date_position_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="yozakura_qs_columns_entries">
+        <item>@string/yozakura_qs_columns_default</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="yozakura_qs_columns_values" translatable="false">
+        <item>0</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="yozakura_qqs_rows_entries">
+        <item>@string/yozakura_qs_columns_default</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="yozakura_qqs_rows_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="yozakura_clock_style_entries" translatable="false">
+        <item>オフ</item>
+        <item>1: oos</item>
+        <item>2: oos2</item>
+        <item>3: center</item>
+        <item>4: ios</item>
+        <item>5: ios2</item>
+        <item>6: ios3</item>
+        <item>7: ios4</item>
+        <item>8: ios5</item>
+        <item>9: ios6</item>
+        <item>10: ios7</item>
+        <item>11: ios8</item>
+        <item>12: ios9</item>
+        <item>13: ios10</item>
+        <item>14: ios11</item>
+        <item>15: ios12</item>
+        <item>16: ios13</item>
+        <item>17: ios14</item>
+        <item>18: ios15</item>
+        <item>19: ios16</item>
+        <item>20: ios17</item>
+        <item>21: ios18</item>
+        <item>22: ios19</item>
+        <item>23: miui</item>
+        <item>24: miui2</item>
+        <item>25: cos1</item>
+        <item>26: cos2</item>
+        <item>27: simple</item>
+        <item>28: ide</item>
+        <item>29: moto</item>
+        <item>30: stylish</item>
+        <item>31: stylish2</item>
+        <item>32: stylish3</item>
+        <item>33: stylish4</item>
+        <item>34: stylish5</item>
+        <item>35: stylish6</item>
+        <item>36: stylish7</item>
+        <item>37: stylish8</item>
+        <item>38: stylish9</item>
+        <item>39: stylish10</item>
+        <item>40: word</item>
+        <item>41: life</item>
+        <item>42: a9</item>
+        <item>43: nos1</item>
+        <item>44: nos2</item>
+        <item>45: num</item>
+        <item>46: accent</item>
+        <item>47: analog</item>
+        <item>48: block</item>
+        <item>49: bubble</item>
+        <item>50: anci_clock_outline</item>
+        <item>51: anci_clock_ovalium</item>
+        <item>52: anci_clock_rectangle</item>
+        <item>53: anci_clock_wallet</item>
+        <item>54: anci_clockdate_clavicula</item>
+        <item>55: anci_clockdate_kln</item>
+        <item>56: anci_clockdate_miring</item>
+        <item>57: anci_clockdate_scapula</item>
+        <item>58: anci_clockdate_sternum</item>
+        <item>59: sparkCircle</item>
+        <item>60: sparkList</item>
+        <item>61: big1</item>
+        <item>62: big2</item>
+        <item>63: big3</item>
+        <item>64: big4</item>
+        <item>65: sweet</item>
+        <item>66: pixel</item>
+        <item>67: samurai</item>
+        <item>68: gateway</item>
+        <item>69: tall</item>
+        <item>70: gobold</item>
+        <item>71: gobold2</item>
+        <item>72: delirium</item>
+        <item>73: deliriumdual</item>
+        <item>74: skewrom</item>
+        <item>75: skewrom2</item>
+        <item>76: taller</item>
+        <item>77: taller2</item>
+        <item>78: taller3</item>
+        <item>79: modak</item>
+        <item>80: galada</item>
+    </string-array>
+    <string-array name="yozakura_clock_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>80</item>
+    </string-array>
+    <!-- YozakuraOS cp78: Monet engine -->
+    <string-array name="yozakura_monet_style_entries" translatable="false">
+        <item>Tonal Spot</item>
+        <item>Vibrant</item>
+        <item>Expressive</item>
+        <item>Spritz</item>
+        <item>Rainbow</item>
+        <item>Fruit Salad</item>
+        <item>Monochromatic</item>
+    </string-array>
+    <string-array name="yozakura_monet_style_values" translatable="false">
+        <item>TONAL_SPOT</item>
+        <item>VIBRANT</item>
+        <item>EXPRESSIVE</item>
+        <item>SPRITZ</item>
+        <item>RAINBOW</item>
+        <item>FRUIT_SALAD</item>
+        <item>MONOCHROMATIC</item>
+    </string-array>
+    <string-array name="yozakura_monet_factor_values" translatable="false">
+        <item>0.5</item>
+        <item>0.75</item>
+        <item>1.0</item>
+        <item>1.5</item>
+        <item>2.0</item>
+        <item>2.5</item>
+    </string-array>
+    <string-array name="yozakura_monet_chroma_entries" translatable="false">
+        <item>0.5x (淡い)</item>
+        <item>0.75x</item>
+        <item>1.0x (標準)</item>
+        <item>1.5x</item>
+        <item>2.0x</item>
+        <item>2.5x (鮮やか)</item>
+    </string-array>
+    <string-array name="yozakura_monet_luminance_values" translatable="false">
+        <item>0.7</item>
+        <item>0.85</item>
+        <item>1.0</item>
+        <item>1.15</item>
+        <item>1.3</item>
+    </string-array>
+    <string-array name="yozakura_monet_luminance_entries" translatable="false">
+        <item>-30% (暗め)</item>
+        <item>-15%</item>
+        <item>標準</item>
+        <item>+15%</item>
+        <item>+30% (明るめ)</item>
+    </string-array>
+
 </resources>

@@ -755,4 +755,18 @@
     <string name="yozakura_volume_left_summary">Show the volume panel on the left side of the screen</string>
     <string name="ls_clock_face_highlight_text">Swipe left or right to preview clock faces, then tap Apply</string>
     <string name="custom_clock_style">Clock style</string>
+    <!-- YozakuraOS cp78: Monet engine -->
+    <string name="yozakura_monet_title">Monet エンジン</string>
+    <string name="yozakura_monet_summary">テーマスタイル・彩度・明度・全体着色</string>
+    <string name="yozakura_monet_style_title">テーマスタイル</string>
+    <string name="yozakura_monet_style_summary">壁紙の色から生成するパレットの種類</string>
+    <string name="yozakura_monet_chroma_title">彩度 (chroma)</string>
+    <string name="yozakura_monet_chroma_summary">アクセント色の鮮やかさを調整</string>
+    <string name="yozakura_monet_luminance_title">明度 (luminance)</string>
+    <string name="yozakura_monet_luminance_summary">パレット全体の明るさを調整</string>
+    <string name="yozakura_monet_whole_palette_title">パレット全体に適用</string>
+    <string name="yozakura_monet_whole_palette_summary">アクセントだけでなくニュートラル色にも彩度/明度を反映</string>
+    <string name="yozakura_monet_tint_background_title">背景を着色</string>
+    <string name="yozakura_monet_tint_background_summary">背景・サーフェス面をアクセント色で淡く着色</string>
+
 </resources>

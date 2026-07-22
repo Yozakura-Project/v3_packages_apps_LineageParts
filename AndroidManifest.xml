@@ -5,7 +5,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.lineageos.lineageparts"
+    package="org.yozakuraos.yozakuraparts"
     android:sharedUserId="android.uid.system"
     android:versionCode="1"
     android:versionName="1.0">
@@ -25,9 +25,9 @@
     <uses-permission android:name="lineageos.permission.MANAGE_REMOTE_PREFERENCES" />
 
     <protected-broadcast android:name="lineageos.platform.app.profiles.PROFILES_STATE_CHANGED" />
-    <protected-broadcast android:name="org.lineageos.lineageparts.PART_CHANGED" />
-    <protected-broadcast android:name="org.lineageos.lineageparts.REFRESH_PART" />
-    <protected-broadcast android:name="org.lineageos.lineageparts.gestures.UPDATE_SETTINGS" />
+    <protected-broadcast android:name="org.yozakuraos.yozakuraparts.PART_CHANGED" />
+    <protected-broadcast android:name="org.yozakuraos.yozakuraparts.REFRESH_PART" />
+    <protected-broadcast android:name="org.yozakuraos.yozakuraparts.gestures.UPDATE_SETTINGS" />
 
     <application
         android:defaultToDeviceProtectedStorage="true"
@@ -48,7 +48,7 @@
             </intent-filter>
             <meta-data
                 android:name="org.lineageos.settings.summary.receiver"
-                android:value="org.lineageos.lineageparts.PartsUpdater" />
+                android:value="org.yozakuraos.yozakuraparts.PartsUpdater" />
         </activity>
 
         <activity
@@ -59,7 +59,7 @@
             android:label="@string/trust_title"
             android:theme="@style/OnBoardingStyle">
             <intent-filter android:priority="-4">
-                <action android:name="org.lineageos.lineageparts.TRUST_HINT" />
+                <action android:name="org.yozakuraos.yozakuraparts.TRUST_HINT" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -85,7 +85,7 @@
 
         <provider
             android:name=".search.LineagePartsSearchIndexablesProvider"
-            android:authorities="org.lineageos.lineageparts"
+            android:authorities="org.yozakuraos.yozakuraparts"
             android:exported="true"
             android:grantUriPermissions="true"
             android:multiprocess="false"
@@ -95,6 +95,41 @@
             </intent-filter>
         </provider>
 
+        <!-- YozakuraOS settings (top-level / homepage) -->
+        <activity-alias
+            android:name=".yozakura.YozakuraSettings"
+            android:icon="@drawable/ic_yozakura_sakura"
+            android:exported="true"
+            android:label="@string/yozakura_settings_title"
+            android:targetActivity="PartsActivity">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+                <action android:name="org.yozakuraos.yozakuraparts.YOZAKURA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.homepage" />
+            <meta-data
+                android:name="com.android.settings.order"
+                android:value="-125" />
+            <meta-data
+                android:name="com.android.settings.profile"
+                android:value="primary_profile_only" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/yozakura_settings_summary" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_yozakura_sakura" />
+            <meta-data
+                android:name="com.android.settings.bg.hint"
+                android:resource="@color/yozakura_tile_bg" />
+            <meta-data
+                android:name="com.android.settings.icon_tintable"
+                android:value="false" />
+        </activity-alias>
+
         <!-- Charging control settings (Battery category) -->
         <activity-alias
             android:name=".health.ChargingControlSettings"
@@ -102,7 +137,7 @@
             android:label="@string/charging_control_title"
             android:targetActivity="PartsActivity">
             <intent-filter>
-                <action android:name="org.lineageos.lineageparts.CHARGING_CONTROL_SETTINGS" />
+                <action android:name="org.yozakuraos.yozakuraparts.CHARGING_CONTROL_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity-alias>
@@ -115,7 +150,7 @@
             android:targetActivity="PartsActivity">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
-                <action android:name="org.lineageos.lineageparts.LIVEDISPLAY_SETTINGS" />
+                <action android:name="org.yozakuraos.yozakuraparts.LIVEDISPLAY_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data
@@ -143,7 +178,7 @@
             android:targetActivity="PartsActivity">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
-                <action android:name="org.lineageos.lineageparts.BUTTON_SETTINGS" />
+                <action android:name="org.yozakuraos.yozakuraparts.BUTTON_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -177,7 +212,7 @@
             android:targetActivity="PartsActivity">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
-                <action android:name="org.lineageos.lineageparts.PROFILES_SETTINGS" />
+                <action android:name="org.yozakuraos.yozakuraparts.PROFILES_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -207,7 +242,7 @@
             android:exported="true"
             android:targetActivity="PartsActivity">
             <intent-filter>
-                <action android:name="org.lineageos.lineageparts.DISPLAY_ROTATION" />
+                <action android:name="org.yozakuraos.yozakuraparts.DISPLAY_ROTATION" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity-alias>
@@ -220,7 +255,7 @@
             android:targetActivity="PartsActivity">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
-                <action android:name="org.lineageos.lineageparts.STATUS_BAR_SETTINGS" />
+                <action android:name="org.yozakuraos.yozakuraparts.STATUS_BAR_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -252,7 +287,7 @@
             android:targetActivity="PartsActivity">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
-                <action android:name="org.lineageos.lineageparts.TOUCHSCREEN_GESTURE_SETTINGS" />
+                <action android:name="org.yozakuraos.yozakuraparts.TOUCHSCREEN_GESTURE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -278,7 +313,7 @@
             android:targetActivity="PartsActivity">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
-                <action android:name="org.lineageos.lineageparts.TRUST_INTERFACE" />
+                <action android:name="org.yozakuraos.yozakuraparts.TRUST_INTERFACE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -304,7 +339,7 @@
             android:targetActivity="PartsActivity">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
-                <action android:name="org.lineageos.lineageparts.CONTRIBUTORS_CLOUD" />
+                <action android:name="org.yozakuraos.yozakuraparts.CONTRIBUTORS_CLOUD" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -325,27 +360,6 @@
                 android:resource="@string/summary_empty" />
         </activity-alias>
 
-        <!-- Anonymous Statistics -->
-        <receiver
-            android:name=".lineagestats.ReportingServiceManager"
-            android:enabled="true"
-            android:exported="false"
-            android:label="ReportingServiceManager">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="org.lineageos.lineageparts.action.TRIGGER_REPORT_METRICS" />
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name=".lineagestats.ReportingService"
-            android:enabled="true"
-            android:exported="false"
-            android:label="ReportingService" />
-
-        <service
-            android:name=".lineagestats.StatsUploadJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <activity
             android:name=".profiles.NFCProfile"
@@ -379,7 +393,7 @@
             android:label="@string/egg_title"
             android:theme="@style/EggStyle">
             <intent-filter>
-                <action android:name="org.lineageos.lineageparts.EASTER_EGG" />
+                <action android:name="org.yozakuraos.yozakuraparts.EASTER_EGG" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="com.android.internal.category.PLATLOGO" />
             </intent-filter>

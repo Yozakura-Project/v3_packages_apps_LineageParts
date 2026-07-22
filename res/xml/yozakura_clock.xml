@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="yozakura_clock"
+    android:title="@string/yozakura_clock_category">
+
+    <lineageos.preference.SecureSettingSwitchPreference
+        android:key="clock_seconds"
+        android:title="@string/status_bar_clock_show_seconds_title"
+        android:summary="@string/status_bar_clock_show_seconds_summary"
+        android:defaultValue="false" />
+
+    <org.yozakuraos.yozakuraparts.preference.SecureSettingListPreference
+        android:key="yozakura_clock_date"
+        android:title="@string/yozakura_clock_date_title"
+        android:summary="%s"
+        android:entries="@array/yozakura_clock_date_entries"
+        android:entryValues="@array/yozakura_clock_date_values"
+        android:defaultValue="0" />
+
+    <org.yozakuraos.yozakuraparts.preference.SecureSettingListPreference
+        android:key="yozakura_clock_date_format"
+        android:title="@string/yozakura_clock_date_format_title"
+        android:summary="%s"
+        android:entries="@array/yozakura_clock_date_format_entries"
+        android:entryValues="@array/yozakura_clock_date_format_values"
+        android:defaultValue="EEE, MMM d"
+        android:dependency="yozakura_clock_date" />
+
+    <org.yozakuraos.yozakuraparts.preference.SecureSettingListPreference
+        android:key="yozakura_clock_date_style"
+        android:title="@string/yozakura_clock_date_style_title"
+        android:summary="%s"
+        android:entries="@array/yozakura_clock_date_style_entries"
+        android:entryValues="@array/yozakura_clock_date_style_values"
+        android:defaultValue="0"
+        android:dependency="yozakura_clock_date" />
+
+    <org.yozakuraos.yozakuraparts.preference.SecureSettingListPreference
+        android:key="yozakura_clock_date_position"
+        android:title="@string/yozakura_clock_date_position_title"
+        android:summary="%s"
+        android:entries="@array/yozakura_clock_date_position_entries"
+        android:entryValues="@array/yozakura_clock_date_position_values"
+        android:defaultValue="0"
+        android:dependency="yozakura_clock_date" />
+
+</PreferenceScreen>

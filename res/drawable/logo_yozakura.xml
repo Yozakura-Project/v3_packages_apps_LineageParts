@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- YozakuraOS: sakura blossom logo for the version easter egg (PlatLogo). Rendered white via color filter. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="180dp"
+    android:viewportWidth="360"
+    android:viewportHeight="180">
+    <group android:pivotX="180" android:pivotY="90" android:rotation="0">
+        <path android:fillColor="#FFFFFFFF" android:pathData="M180,90 C158,72 152,45 168,24 C174,32 186,32 192,24 C208,45 202,72 180,90 Z" />
+    </group>
+    <group android:pivotX="180" android:pivotY="90" android:rotation="72">
+        <path android:fillColor="#FFFFFFFF" android:pathData="M180,90 C158,72 152,45 168,24 C174,32 186,32 192,24 C208,45 202,72 180,90 Z" />
+    </group>
+    <group android:pivotX="180" android:pivotY="90" android:rotation="144">
+        <path android:fillColor="#FFFFFFFF" android:pathData="M180,90 C158,72 152,45 168,24 C174,32 186,32 192,24 C208,45 202,72 180,90 Z" />
+    </group>
+    <group android:pivotX="180" android:pivotY="90" android:rotation="216">
+        <path android:fillColor="#FFFFFFFF" android:pathData="M180,90 C158,72 152,45 168,24 C174,32 186,32 192,24 C208,45 202,72 180,90 Z" />
+    </group>
+    <group android:pivotX="180" android:pivotY="90" android:rotation="288">
+        <path android:fillColor="#FFFFFFFF" android:pathData="M180,90 C158,72 152,45 168,24 C174,32 186,32 192,24 C208,45 202,72 180,90 Z" />
+    </group>
+    <path android:fillColor="#FFF6C453" android:pathData="M180,90 m-13,0 a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0 Z" />
+</vector>

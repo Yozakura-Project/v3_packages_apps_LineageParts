@@ -20,4 +20,12 @@
         android:key="long_screen_settings"
         android:title="@string/long_screen_settings_title" />
 
+
+    <!-- YozakuraOS cp78: advanced Monet engine controls -->
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.yozakura.YozakuraMonetFragment"
+        android:key="yozakura_monet"
+        android:title="@string/yozakura_monet_title"
+        android:summary="@string/yozakura_monet_summary" />
+
 </PreferenceScreen>

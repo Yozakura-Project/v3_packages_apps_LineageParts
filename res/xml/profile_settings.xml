@@ -17,7 +17,7 @@
         android:summary="@string/sound_mode"
         android:title="@string/sound_mode" />
 
-    <org.lineageos.lineageparts.profiles.ProfileRingtonePreference
+    <org.yozakuraos.yozakuraparts.profiles.ProfileRingtonePreference
         android:dialogTitle="@string/soundtone_title"
         android:key="soundtone"
         android:persistent="false"
@@ -33,7 +33,7 @@
         android:summary="@string/ringer_mode"
         android:title="@string/ringer_mode" />
 
-    <org.lineageos.lineageparts.profiles.ProfileRingtonePreference
+    <org.yozakuraos.yozakuraparts.profiles.ProfileRingtonePreference
         android:dialogTitle="@string/ringtone_title"
         android:key="ringtone"
         android:persistent="false"

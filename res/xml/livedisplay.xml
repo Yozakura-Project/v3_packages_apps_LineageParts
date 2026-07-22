@@ -19,7 +19,7 @@
             android:persistent="false" />
 
     <!-- Manual temperature selection -->
-    <org.lineageos.lineageparts.livedisplay.DisplayTemperature
+    <org.yozakuraos.yozakuraparts.livedisplay.DisplayTemperature
             android:key="live_display_color_temperature"
             android:title="@string/live_display_color_temperature_title"
             android:dialogTitle="@*lineageos.platform:string/live_display_title"
@@ -52,7 +52,7 @@
             android:title="@string/advanced">
 
         <!-- RGB display color adjustments -->
-        <org.lineageos.lineageparts.livedisplay.DisplayColor
+        <org.yozakuraos.yozakuraparts.livedisplay.DisplayColor
                 android:key="color_calibration"
                 android:title="@string/color_calibration_title"
                 android:dialogTitle="@string/color_calibration_title"
@@ -60,7 +60,7 @@
                 android:persistent="false"/>
 
         <!-- HSIC display color adjustments -->
-        <org.lineageos.lineageparts.livedisplay.PictureAdjustment
+        <org.yozakuraos.yozakuraparts.livedisplay.PictureAdjustment
                 android:key="picture_adjustment"
                 android:title="@string/picture_adjustment_title"
                 android:dialogTitle="@string/picture_adjustment_title"

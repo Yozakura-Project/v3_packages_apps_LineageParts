@@ -4,7 +4,7 @@
  */
 
 android_app {
-    name: "LineageParts",
+    name: "YozakuraParts",
 
     // Include SettingsLib and it's dependencies
     defaults: ["SettingsLibDefaults"],
@@ -18,7 +18,7 @@ android_app {
     certificate: "platform",
     system_ext_specific: true,
     privileged: true,
-    privapp_allowlist: "org.lineageos.lineageparts.xml",
+    privapp_allowlist: "org.yozakuraos.yozakuraparts.xml",
 
     optimize: {
         optimize: true,
@@ -35,5 +35,8 @@ android_app {
         "SettingsLibPreference",
         "SystemUISharedLib",
         "LineagePreferenceLib",
+        "com.google.android.material_material",
+        "androidx.viewpager_viewpager",
+        "lottie",
     ],
 }
