@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="yozakura_power"
+    android:title="@string/yozakura_power_category">
+
+    <!-- YozakuraOS cp72: gather power/battery customization under the Yozakura power menu -->
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.input.PowerMenuActions"
+        android:key="power_menu"
+        android:title="@string/power_menu_title" />
+
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.health.ChargingControlSettings"
+        android:key="charging_control"
+        android:title="@string/charging_control_title" />
+
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.sounds.ChargingSoundsSettings"
+        android:key="charging_sounds_settings"
+        android:title="@string/charging_sounds_settings_title" />
+
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.notificationlight.BatteryLightSettings"
+        android:key="battery_lights"
+        android:title="@string/battery_light_title" />
+
+</PreferenceScreen>
