@@ -106,4 +106,31 @@
         android:entryValues="@array/yozakura_qqs_rows_values"
         android:defaultValue="0" />
 
+
+    <!-- YozakuraOS cp81: expose LineageOS QS brightness slider options (SystemUI already honors these) -->
+    <lineageos.preference.LineageSecureSettingListPreference
+        android:key="qs_show_brightness_slider"
+        android:title="@string/status_bar_brightness_slider_title"
+        android:dialogTitle="@string/status_bar_brightness_slider_title"
+        android:entries="@array/status_bar_brightness_slider_entries"
+        android:entryValues="@array/status_bar_brightness_slider_values"
+        android:defaultValue="1"
+        android:summary="%s" />
+
+    <lineageos.preference.LineageSecureSettingListPreference
+        android:key="qs_brightness_slider_position"
+        android:title="@string/status_bar_brightness_slider_position_title"
+        android:dependency="qs_show_brightness_slider"
+        android:entries="@array/status_bar_brightness_slider_position_entries"
+        android:entryValues="@array/status_bar_brightness_slider_position_values"
+        android:defaultValue="0"
+        android:summary="%s" />
+
+    <lineageos.preference.LineageSecureSettingSwitchPreference
+        android:key="qs_show_auto_brightness"
+        android:title="@string/status_bar_brightness_slider_auto_title"
+        android:summary="@string/status_bar_brightness_slider_auto_summary"
+        android:dependency="qs_show_brightness_slider"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
