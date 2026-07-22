@@ -831,20 +831,24 @@
         <item>MONOCHROMATIC</item>
     </string-array>
     <string-array name="yozakura_monet_factor_values" translatable="false">
+        <item>0.25</item>
         <item>0.5</item>
         <item>0.75</item>
         <item>1.0</item>
         <item>1.5</item>
         <item>2.0</item>
         <item>2.5</item>
+        <item>3.0</item>
     </string-array>
     <string-array name="yozakura_monet_chroma_entries" translatable="false">
+        <item>0.25x (最小)</item>
         <item>0.5x (淡い)</item>
         <item>0.75x</item>
         <item>1.0x (標準)</item>
         <item>1.5x</item>
         <item>2.0x</item>
         <item>2.5x (鮮やか)</item>
+        <item>3.0x (最大)</item>
     </string-array>
     <string-array name="yozakura_monet_luminance_values" translatable="false">
         <item>0.7</item>
@@ -871,6 +875,10 @@
         <item>パープル</item>
         <item>オレンジ</item>
         <item>ティール</item>
+        <item>インディゴ</item>
+        <item>シアン</item>
+        <item>アンバー</item>
+        <item>ローズ</item>
     </string-array>
     <string-array name="yozakura_monet_accent_values" translatable="false">
         <item>dynamic</item>
@@ -881,6 +889,10 @@
         <item>9c27b0</item>
         <item>ff9800</item>
         <item>009688</item>
+        <item>3f51b5</item>
+        <item>00bcd4</item>
+        <item>ffc107</item>
+        <item>e91e63</item>
     </string-array>
 
 </resources>
