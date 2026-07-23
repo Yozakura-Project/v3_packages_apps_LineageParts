@@ -945,4 +945,57 @@
         <item>48</item>
         <item>64</item>
     </string-array>
+    <string-array name="yozakura_edgelight_color_entries" translatable="false">
+        <item>アクセント色</item>
+        <item>通知の色</item>
+        <item>壁紙の色</item>
+        <item>カスタム</item>
+        <item>レインボー</item>
+    </string-array>
+    <string-array name="yozakura_edgelight_color_values" translatable="false">
+        <item>accent</item>
+        <item>notification</item>
+        <item>wallpaper</item>
+        <item>custom</item>
+        <item>rainbow</item>
+    </string-array>
+    <string-array name="yozakura_edgelight_style_entries" translatable="false">
+        <item>標準</item>
+        <item>角丸</item>
+    </string-array>
+    <string-array name="yozakura_edgelight_style_values" translatable="false">
+        <item>default</item>
+        <item>rounded</item>
+    </string-array>
+    <string-array name="yozakura_edgelight_effect_entries" translatable="false">
+        <item>なし</item>
+        <item>ブリージング</item>
+        <item>ウェーブ</item>
+        <item>スパークル</item>
+        <item>チェイス</item>
+        <item>コメット</item>
+    </string-array>
+    <string-array name="yozakura_edgelight_effect_values" translatable="false">
+        <item>none</item>
+        <item>breathing</item>
+        <item>wave</item>
+        <item>sparkle</item>
+        <item>chase</item>
+        <item>comet</item>
+    </string-array>
+    <string-array name="yozakura_edgelight_pulse_count_entries" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="yozakura_edgelight_stroke_entries" translatable="false">
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+        <item>24</item>
+        <item>32</item>
+    </string-array>
 </resources>

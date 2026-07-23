@@ -98,4 +98,58 @@
 
     </PreferenceCategory>
 
+    <!-- YozakuraOS cp92: EdgeLight edge lighting. SystemUI edgelight/ engine (cp91)
+         reads these Settings.System keys; all preferences self-persist. -->
+    <PreferenceCategory
+        android:key="yozakura_edgelight_category"
+        android:title="@string/yozakura_edgelight_category">
+
+        <lineageos.preference.SystemSettingSwitchPreference
+            android:key="edge_light_enabled"
+            android:title="@string/yozakura_edgelight_enabled_title"
+            android:summary="@string/yozakura_edgelight_enabled_summary"
+            android:defaultValue="false" />
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingListPreference
+            android:key="edge_light_color_mode"
+            android:title="@string/yozakura_edgelight_color_title"
+            android:summary="%s"
+            android:entries="@array/yozakura_edgelight_color_entries"
+            android:entryValues="@array/yozakura_edgelight_color_values"
+            android:defaultValue="accent" />
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingListPreference
+            android:key="edge_light_style"
+            android:title="@string/yozakura_edgelight_style_title"
+            android:summary="%s"
+            android:entries="@array/yozakura_edgelight_style_entries"
+            android:entryValues="@array/yozakura_edgelight_style_values"
+            android:defaultValue="default" />
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingListPreference
+            android:key="edge_light_animation_effect"
+            android:title="@string/yozakura_edgelight_effect_title"
+            android:summary="%s"
+            android:entries="@array/yozakura_edgelight_effect_entries"
+            android:entryValues="@array/yozakura_edgelight_effect_values"
+            android:defaultValue="none" />
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingListPreference
+            android:key="edge_light_pulse_count"
+            android:title="@string/yozakura_edgelight_pulse_count_title"
+            android:summary="%s"
+            android:entries="@array/yozakura_edgelight_pulse_count_entries"
+            android:entryValues="@array/yozakura_edgelight_pulse_count_entries"
+            android:defaultValue="3" />
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingListPreference
+            android:key="edge_light_stroke_width"
+            android:title="@string/yozakura_edgelight_stroke_title"
+            android:summary="%s"
+            android:entries="@array/yozakura_edgelight_stroke_entries"
+            android:entryValues="@array/yozakura_edgelight_stroke_entries"
+            android:defaultValue="8" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

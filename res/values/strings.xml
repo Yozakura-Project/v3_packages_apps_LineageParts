@@ -791,4 +791,12 @@
     <string name="yozakura_pulse_rounded_summary">バーの角を丸くする</string>
     <string name="yozakura_pulse_haptics_title">低音ハプティクス</string>
     <string name="yozakura_pulse_haptics_summary">低音に合わせて端末を振動させる</string>
+    <string name="yozakura_edgelight_category">画面端ライト (EdgeLight)</string>
+    <string name="yozakura_edgelight_enabled_title">画面端ライトを有効化</string>
+    <string name="yozakura_edgelight_enabled_summary">常時表示(AOD)中に通知が届くと画面の縁が光る</string>
+    <string name="yozakura_edgelight_color_title">色モード</string>
+    <string name="yozakura_edgelight_style_title">縁のスタイル</string>
+    <string name="yozakura_edgelight_effect_title">アニメーション効果</string>
+    <string name="yozakura_edgelight_pulse_count_title">点滅回数</string>
+    <string name="yozakura_edgelight_stroke_title">線の太さ</string>
 </resources>
