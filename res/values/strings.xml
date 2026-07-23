@@ -771,7 +771,9 @@
 
     <!-- YozakuraOS cp79: Monet accent preset -->
     <string name="yozakura_monet_accent_title">アクセント色</string>
-    <string name="yozakura_monet_accent_summary">壁紙から自動生成、またはプリセット色を選択</string>
+    <string name="yozakura_monet_accent_summary">壁紙から自動生成、プリセット色、または任意の色を選択</string>
+    <string name="yozakura_monet_custom_color_title">任意の色</string>
+    <string name="yozakura_monet_custom_color_summary">カラーピッカーで自由な色を種色(シード)に設定</string>
 
     <!-- YozakuraOS cp84: lockscreen scramble PIN layout (SystemUI KeyguardPinViewController honors this) -->
     <string name="lockscreen_scramble_pin_layout_title">PIN配列をスクランブル</string>

@@ -879,6 +879,7 @@
         <item>シアン</item>
         <item>アンバー</item>
         <item>ローズ</item>
+        <item>カスタム…</item>
     </string-array>
     <string-array name="yozakura_monet_accent_values" translatable="false">
         <item>dynamic</item>
@@ -893,6 +894,7 @@
         <item>00bcd4</item>
         <item>ffc107</item>
         <item>e91e63</item>
+        <item>custom</item>
     </string-array>
 
 </resources>

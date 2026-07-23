@@ -16,6 +16,12 @@
         android:entryValues="@array/yozakura_monet_accent_values"
         android:defaultValue="dynamic" />
 
+    <org.yozakuraos.yozakuraparts.yozakura.MonetColorPickerPreference
+        android:key="monet_custom_color"
+        android:persistent="false"
+        android:title="@string/yozakura_monet_custom_color_title"
+        android:summary="@string/yozakura_monet_custom_color_summary" />
+
     <ListPreference
         android:key="monet_theme_style"
         android:title="@string/yozakura_monet_style_title"

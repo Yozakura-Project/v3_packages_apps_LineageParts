@@ -4,6 +4,7 @@
  */
 package org.yozakuraos.yozakuraparts.yozakura;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
@@ -20,12 +21,19 @@ import org.yozakuraos.yozakuraparts.SettingsPreferenceFragment;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Locale;
+
 /**
  * YozakuraOS cp78: expose the advanced Monet engine controls (theme style,
  * luminance / chroma factors, whole-palette tint, background tint) that the
  * cp77 framework changes in ThemeOverlayController already consume. Values are
  * written straight into THEME_CUSTOMIZATION_OVERLAY_PACKAGES, matching the JSON
  * keys the framework reads.
+ *
+ * cp85: add a free-form Monet seed color via MonetColorPickerPreference. Picking
+ * a color writes the same accent_color / system_palette / color_source=preset
+ * keys the cp79 accent presets use, so a custom color is just an arbitrary hex
+ * instead of one of the twelve presets. No framework change.
  */
 public class YozakuraMonetFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -43,6 +51,7 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
     private static final String COLOR_SOURCE_PRESET = "preset";
     private static final String COLOR_SOURCE_WALLPAPER = "home_wallpaper";
     private static final String VALUE_DYNAMIC = "dynamic";
+    private static final String VALUE_CUSTOM = "custom";
     private static final String OVERLAY_LUMINANCE_FACTOR =
             "android.theme.customization.luminance_factor";
     private static final String OVERLAY_CHROMA_FACTOR =
@@ -54,6 +63,7 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
     private static final String TIMESTAMP_FIELD = "_applied_timestamp";
 
     private static final String PREF_ACCENT = "monet_accent_preset";
+    private static final String PREF_CUSTOM_COLOR = "monet_custom_color";
     private static final String PREF_STYLE = "monet_theme_style";
     private static final String PREF_LUMINANCE = "monet_luminance_factor";
     private static final String PREF_CHROMA = "monet_chroma_factor";
@@ -61,6 +71,7 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
     private static final String PREF_TINT_BACKGROUND = "monet_tint_background";
 
     private ListPreference mAccentPref;
+    private MonetColorPickerPreference mCustomColorPref;
     private ListPreference mStylePref;
     private ListPreference mLuminancePref;
     private ListPreference mChromaPref;
@@ -74,6 +85,7 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
         getActivity().setTitle(R.string.yozakura_monet_title);
 
         mAccentPref = findPreference(PREF_ACCENT);
+        mCustomColorPref = findPreference(PREF_CUSTOM_COLOR);
         mStylePref = findPreference(PREF_STYLE);
         mLuminancePref = findPreference(PREF_LUMINANCE);
         mChromaPref = findPreference(PREF_CHROMA);
@@ -90,6 +102,7 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
         mChromaPref.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance());
 
         mAccentPref.setOnPreferenceChangeListener(this);
+        mCustomColorPref.setOnPreferenceChangeListener(this);
         mStylePref.setOnPreferenceChangeListener(this);
         mLuminancePref.setOnPreferenceChangeListener(this);
         mChromaPref.setOnPreferenceChangeListener(this);
@@ -135,9 +148,12 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
 
         final String source = object.optString(OVERLAY_COLOR_SOURCE, COLOR_SOURCE_WALLPAPER);
         if (COLOR_SOURCE_PRESET.equals(source)) {
-            setAccentValue(object.optString(OVERLAY_ACCENT_COLOR, ""));
+            final String hex = object.optString(OVERLAY_ACCENT_COLOR, "");
+            setAccentValue(hex);
+            updateCustomColorFromHex(hex);
         } else {
             setListValue(mAccentPref, VALUE_DYNAMIC);
+            updateCustomColorFromHex("");
         }
 
         final String style = object.optString(OVERLAY_THEME_STYLE, "TONAL_SPOT");
@@ -150,7 +166,11 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
         mTintBackgroundPref.setChecked(object.optInt(OVERLAY_TINT_BACKGROUND, 0) == 1);
     }
 
-    /** Select the preset whose hex matches the stored accent color, else Dynamic. */
+    /**
+     * Select the preset whose hex matches the stored accent color. If the stored
+     * color is a non-empty hex that is not one of the presets, it is a custom
+     * color, so select the "custom" entry. Otherwise fall back to Dynamic.
+     */
     private void setAccentValue(String hex) {
         if (!TextUtils.isEmpty(hex)) {
             for (CharSequence v : mAccentPref.getEntryValues()) {
@@ -159,8 +179,27 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
                     return;
                 }
             }
+            setListValue(mAccentPref, VALUE_CUSTOM);
+            return;
         }
         setListValue(mAccentPref, VALUE_DYNAMIC);
+    }
+
+    /** Reflect the current seed hex in the custom-color row (picker start + summary). */
+    private void updateCustomColorFromHex(String hex) {
+        if (mCustomColorPref == null) {
+            return;
+        }
+        if (TextUtils.isEmpty(hex)) {
+            mCustomColorPref.setSummary(R.string.yozakura_monet_custom_color_summary);
+            return;
+        }
+        try {
+            mCustomColorPref.setColorRgb(Color.parseColor('#' + hex) & 0x00FFFFFF);
+            mCustomColorPref.setSummary("#" + hex.toUpperCase(Locale.US));
+        } catch (IllegalArgumentException e) {
+            mCustomColorPref.setSummary(R.string.yozakura_monet_custom_color_summary);
+        }
     }
 
     private void setListValue(ListPreference pref, String value) {
@@ -191,23 +230,53 @@ public class YozakuraMonetFragment extends SettingsPreferenceFragment
         pref.setValueIndex(best);
     }
 
+    /** Apply a preset/custom seed hex to the three theme-customization keys. */
+    private void applyAccentHex(String hex) {
+        final JSONObject object = getJson();
+        try {
+            object.putOpt(OVERLAY_ACCENT_COLOR, hex);
+            object.putOpt(OVERLAY_SYSTEM_PALETTE, hex);
+            object.putOpt(OVERLAY_COLOR_SOURCE, COLOR_SOURCE_PRESET);
+            putJson(object);
+        } catch (JSONException e) {
+            Log.i(TAG, "Failed to apply accent hex.", e);
+        }
+    }
+
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final JSONObject object = getJson();
         try {
             if (preference == mAccentPref) {
                 final String value = (String) newValue;
+                if (VALUE_CUSTOM.equals(value)) {
+                    // Selecting "custom" just opens the color picker; the actual
+                    // write happens when the dialog is confirmed. Don't persist
+                    // the list selection yet.
+                    onDisplayPreferenceDialog(mCustomColorPref);
+                    return false;
+                }
                 if (VALUE_DYNAMIC.equals(value)) {
                     object.remove(OVERLAY_ACCENT_COLOR);
                     object.remove(OVERLAY_SYSTEM_PALETTE);
                     object.putOpt(OVERLAY_COLOR_SOURCE, COLOR_SOURCE_WALLPAPER);
+                    putJson(object);
+                    setListValue(mAccentPref, value);
+                    updateCustomColorFromHex("");
                 } else {
                     object.putOpt(OVERLAY_ACCENT_COLOR, value);
                     object.putOpt(OVERLAY_SYSTEM_PALETTE, value);
                     object.putOpt(OVERLAY_COLOR_SOURCE, COLOR_SOURCE_PRESET);
+                    putJson(object);
+                    setListValue(mAccentPref, value);
+                    updateCustomColorFromHex(value);
                 }
-                putJson(object);
-                setListValue(mAccentPref, value);
+                return true;
+            } else if (preference == mCustomColorPref) {
+                final String hex = (String) newValue; // RRGGBB
+                applyAccentHex(hex);
+                setAccentValue(hex);
+                updateCustomColorFromHex(hex);
                 return true;
             } else if (preference == mStylePref) {
                 final String value = (String) newValue;
