@@ -35,4 +35,11 @@
         android:summary="@string/yozakura_ls_rotation_summary"
         android:defaultValue="false" />
 
+    <!-- YozakuraOS cp84: expose LineageOS scramble PIN layout (SystemUI KeyguardPinViewController honors LineageSettings.System.lockscreen_scramble_pin_layout) -->
+    <lineageos.preference.LineageSystemSettingSwitchPreference
+        android:key="lockscreen_scramble_pin_layout"
+        android:title="@string/lockscreen_scramble_pin_layout_title"
+        android:summary="@string/lockscreen_scramble_pin_layout_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>

@@ -773,4 +773,8 @@
     <string name="yozakura_monet_accent_title">アクセント色</string>
     <string name="yozakura_monet_accent_summary">壁紙から自動生成、またはプリセット色を選択</string>
 
+    <!-- YozakuraOS cp84: lockscreen scramble PIN layout (SystemUI KeyguardPinViewController honors this) -->
+    <string name="lockscreen_scramble_pin_layout_title">PIN配列をスクランブル</string>
+    <string name="lockscreen_scramble_pin_layout_summary">ロック画面のPIN入力キーの配置を毎回ランダムにする</string>
+
 </resources>
