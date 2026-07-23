@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The YozakuraOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/monet_color_swatch"
+    android:layout_width="32dip"
+    android:layout_height="32dip"
+    android:layout_gravity="center"
+    android:padding="2dp"
+    android:adjustViewBounds="true"
+    android:contentDescription="@string/yozakura_monet_custom_color_title" />

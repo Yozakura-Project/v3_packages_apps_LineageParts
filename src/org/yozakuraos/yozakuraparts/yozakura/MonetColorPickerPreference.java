@@ -14,10 +14,14 @@ import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.preference.PreferenceViewHolder;
 
 import org.yozakuraos.yozakuraparts.R;
 import org.yozakuraos.yozakuraparts.notificationlight.ColorPanelView;
@@ -46,6 +50,23 @@ public class MonetColorPickerPreference extends CustomDialogPreference<AlertDial
 
     public MonetColorPickerPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
+        // A small swatch on the right edge previews the current seed color.
+        setWidgetLayoutResource(R.layout.preference_monet_color_swatch);
+    }
+
+    @Override
+    public void onBindViewHolder(PreferenceViewHolder holder) {
+        super.onBindViewHolder(holder);
+        final ImageView swatch =
+                (ImageView) holder.findViewById(R.id.monet_color_swatch);
+        if (swatch != null) {
+            final int size = (int) getContext().getResources()
+                    .getDimension(R.dimen.oval_notification_size);
+            // Nudge near-white colors down a touch so the swatch stays visible.
+            final int rgb = mColor & 0x00FFFFFF;
+            final int shown = ((rgb & 0xF0F0F0) == 0xF0F0F0) ? (rgb - 0x101010) : rgb;
+            swatch.setImageDrawable(createOvalShape(size, 0xFF000000 | shown));
+        }
     }
 
     /** RRGGBB hex string (no leading '#', lowercase). */
@@ -56,6 +77,7 @@ public class MonetColorPickerPreference extends CustomDialogPreference<AlertDial
     /** Set the current color from an RRGGBB int (alpha ignored). */
     public void setColorRgb(int rgb) {
         mColor = rgb & 0x00FFFFFF;
+        notifyChanged();
     }
 
     @NonNull
@@ -123,7 +145,16 @@ public class MonetColorPickerPreference extends CustomDialogPreference<AlertDial
     protected void onDialogClosed(boolean positiveResult) {
         if (positiveResult && mColorPicker != null) {
             mColor = mColorPicker.getColor() & 0x00FFFFFF;
+            notifyChanged();
             callChangeListener(getColorHex());
         }
+    }
+
+    private static ShapeDrawable createOvalShape(int size, int color) {
+        final ShapeDrawable shape = new ShapeDrawable(new OvalShape());
+        shape.setIntrinsicHeight(size);
+        shape.setIntrinsicWidth(size);
+        shape.getPaint().setColor(color);
+        return shape;
     }
 }
