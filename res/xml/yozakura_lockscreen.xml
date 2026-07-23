@@ -42,4 +42,60 @@
         android:summary="@string/lockscreen_scramble_pin_layout_summary"
         android:defaultValue="false" />
 
+    <!-- YozakuraOS cp90: Pulse music visualizer. The SystemUI pulse/ engine (cp88/89)
+         reads these Settings.Secure keys; all preferences self-persist. -->
+    <PreferenceCategory
+        android:key="yozakura_pulse_category"
+        android:title="@string/yozakura_pulse_category">
+
+        <lineageos.preference.SecureSettingSwitchPreference
+            android:key="lockscreen_pulse_enabled"
+            android:title="@string/yozakura_pulse_enabled_title"
+            android:summary="@string/yozakura_pulse_enabled_summary"
+            android:defaultValue="false" />
+
+        <lineageos.preference.SecureSettingSwitchPreference
+            android:key="ambient_pulse_enabled"
+            android:title="@string/yozakura_pulse_ambient_title"
+            android:summary="@string/yozakura_pulse_ambient_summary"
+            android:defaultValue="true" />
+
+        <org.yozakuraos.yozakuraparts.preference.SecureSettingListPreference
+            android:key="pulse_renderer"
+            android:title="@string/yozakura_pulse_renderer_title"
+            android:summary="%s"
+            android:entries="@array/yozakura_pulse_renderer_entries"
+            android:entryValues="@array/yozakura_pulse_renderer_values"
+            android:defaultValue="solid" />
+
+        <org.yozakuraos.yozakuraparts.preference.SecureSettingListPreference
+            android:key="pulse_color"
+            android:title="@string/yozakura_pulse_color_title"
+            android:summary="%s"
+            android:entries="@array/yozakura_pulse_color_entries"
+            android:entryValues="@array/yozakura_pulse_color_values"
+            android:defaultValue="lavalamp" />
+
+        <org.yozakuraos.yozakuraparts.preference.SecureSettingListPreference
+            android:key="pulse_bar_count"
+            android:title="@string/yozakura_pulse_bar_count_title"
+            android:summary="%s"
+            android:entries="@array/yozakura_pulse_bar_count_entries"
+            android:entryValues="@array/yozakura_pulse_bar_count_values"
+            android:defaultValue="32" />
+
+        <lineageos.preference.SecureSettingSwitchPreference
+            android:key="pulse_rounded_bars"
+            android:title="@string/yozakura_pulse_rounded_title"
+            android:summary="@string/yozakura_pulse_rounded_summary"
+            android:defaultValue="false" />
+
+        <lineageos.preference.SecureSettingSwitchPreference
+            android:key="pulse_bass_haptics"
+            android:title="@string/yozakura_pulse_haptics_title"
+            android:summary="@string/yozakura_pulse_haptics_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

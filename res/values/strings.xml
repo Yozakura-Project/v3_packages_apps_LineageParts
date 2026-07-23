@@ -779,4 +779,16 @@
     <string name="lockscreen_scramble_pin_layout_title">PIN配列をスクランブル</string>
     <string name="lockscreen_scramble_pin_layout_summary">ロック画面のPIN入力キーの配置を毎回ランダムにする</string>
 
+    <string name="yozakura_pulse_category">Pulse ミュージックビジュアライザ</string>
+    <string name="yozakura_pulse_enabled_title">Pulse を有効化</string>
+    <string name="yozakura_pulse_enabled_summary">ロック画面で、再生中の音楽に反応するビジュアライザを表示</string>
+    <string name="yozakura_pulse_ambient_title">常時表示(AOD)でも表示</string>
+    <string name="yozakura_pulse_ambient_summary">アンビエント表示中もビジュアライザを表示</string>
+    <string name="yozakura_pulse_renderer_title">スタイル</string>
+    <string name="yozakura_pulse_color_title">色</string>
+    <string name="yozakura_pulse_bar_count_title">バーの数</string>
+    <string name="yozakura_pulse_rounded_title">角丸バー</string>
+    <string name="yozakura_pulse_rounded_summary">バーの角を丸くする</string>
+    <string name="yozakura_pulse_haptics_title">低音ハプティクス</string>
+    <string name="yozakura_pulse_haptics_summary">低音に合わせて端末を振動させる</string>
 </resources>

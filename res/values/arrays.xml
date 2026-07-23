@@ -897,4 +897,52 @@
         <item>custom</item>
     </string-array>
 
+    <string-array name="yozakura_pulse_renderer_entries" translatable="false">
+        <item>ソリッド</item>
+        <item>フェード</item>
+        <item>ネオン</item>
+        <item>レトロVU</item>
+        <item>ミニマル</item>
+        <item>スパークル</item>
+        <item>マトリックス</item>
+        <item>パーティクル</item>
+        <item>波形</item>
+    </string-array>
+    <string-array name="yozakura_pulse_renderer_values" translatable="false">
+        <item>solid</item>
+        <item>fading</item>
+        <item>neon</item>
+        <item>retro</item>
+        <item>minimal</item>
+        <item>sparkle</item>
+        <item>matrix</item>
+        <item>particle</item>
+        <item>waveform</item>
+    </string-array>
+    <string-array name="yozakura_pulse_color_entries" translatable="false">
+        <item>ラバランプ (虹)</item>
+        <item>アクセント色</item>
+        <item>アルバムアート</item>
+        <item>白</item>
+    </string-array>
+    <string-array name="yozakura_pulse_color_values" translatable="false">
+        <item>lavalamp</item>
+        <item>accent</item>
+        <item>album</item>
+        <item>white</item>
+    </string-array>
+    <string-array name="yozakura_pulse_bar_count_entries" translatable="false">
+        <item>16</item>
+        <item>24</item>
+        <item>32</item>
+        <item>48</item>
+        <item>64</item>
+    </string-array>
+    <string-array name="yozakura_pulse_bar_count_values" translatable="false">
+        <item>16</item>
+        <item>24</item>
+        <item>32</item>
+        <item>48</item>
+        <item>64</item>
+    </string-array>
 </resources>
