@@ -998,4 +998,37 @@
         <item>24</item>
         <item>32</item>
     </string-array>
+
+    <!-- YozakuraOS cp94: ChargingAnimation arrays -->
+    <string-array name="yozakura_charging_style_entries" translatable="false">
+        <item>Bubble Stream</item>
+        <item>Neon</item>
+        <item>Beam</item>
+        <item>Plasma</item>
+        <item>Quantum Sparks</item>
+        <item>Nebula</item>
+        <item>Digital Matrix</item>
+        <item>GeoFlow</item>
+    </string-array>
+    <string-array name="yozakura_charging_style_values" translatable="false">
+        <item>0</item><item>1</item><item>2</item><item>3</item>
+        <item>4</item><item>5</item><item>6</item><item>7</item>
+    </string-array>
+    <string-array name="yozakura_charging_color_entries" translatable="false">
+        <item>Default (green)</item>
+        <item>Accent</item>
+        <item>Rainbow</item>
+    </string-array>
+    <string-array name="yozakura_charging_color_values" translatable="false">
+        <item>0</item><item>1</item><item>2</item>
+    </string-array>
+    <string-array name="yozakura_charging_percent_entries" translatable="false">
+        <item>20%</item><item>40%</item><item>60%</item><item>80%</item><item>100%</item>
+    </string-array>
+    <string-array name="yozakura_charging_percent_values" translatable="false">
+        <item>20</item><item>40</item><item>60</item><item>80</item><item>100</item>
+    </string-array>
+    <string-array name="yozakura_charging_arc_entries" translatable="false">
+        <item>1</item><item>2</item><item>3</item><item>4</item><item>5</item><item>6</item>
+    </string-array>
 </resources>

@@ -799,4 +799,16 @@
     <string name="yozakura_edgelight_effect_title">アニメーション効果</string>
     <string name="yozakura_edgelight_pulse_count_title">点滅回数</string>
     <string name="yozakura_edgelight_stroke_title">線の太さ</string>
+
+    <!-- YozakuraOS cp94: ChargingAnimation settings -->
+    <string name="yozakura_charging_category">Charging animation</string>
+    <string name="yozakura_charging_enabled_title">Charging animation</string>
+    <string name="yozakura_charging_enabled_summary">Show a charging circle animation on the lock screen while charging</string>
+    <string name="yozakura_charging_lockscreen_title">Show on lock screen</string>
+    <string name="yozakura_charging_aod_title">Show on always-on display</string>
+    <string name="yozakura_charging_style_title">Animation style</string>
+    <string name="yozakura_charging_color_title">Color mode</string>
+    <string name="yozakura_charging_ripple_title">Ripple opacity</string>
+    <string name="yozakura_charging_glow_title">Glow intensity</string>
+    <string name="yozakura_charging_arc_title">Arc count</string>
 </resources>

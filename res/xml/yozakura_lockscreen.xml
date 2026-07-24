@@ -152,4 +152,66 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="yozakura_charging_category"
+        android:title="@string/yozakura_charging_category">
+
+        <lineageos.preference.SystemSettingSwitchPreference
+            android:key="charging_animation_enabled"
+            android:title="@string/yozakura_charging_enabled_title"
+            android:summary="@string/yozakura_charging_enabled_summary"
+            android:defaultValue="false" />
+
+        <lineageos.preference.SystemSettingSwitchPreference
+            android:key="charging_show_on_lockscreen"
+            android:title="@string/yozakura_charging_lockscreen_title"
+            android:defaultValue="true" />
+
+        <lineageos.preference.SystemSettingSwitchPreference
+            android:key="charging_show_on_aod"
+            android:title="@string/yozakura_charging_aod_title"
+            android:defaultValue="true" />
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingListPreference
+            android:key="charging_animation_style"
+            android:title="@string/yozakura_charging_style_title"
+            android:summary="%s"
+            android:entries="@array/yozakura_charging_style_entries"
+            android:entryValues="@array/yozakura_charging_style_values"
+            android:defaultValue="0" />
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingListPreference
+            android:key="charging_color_mode"
+            android:title="@string/yozakura_charging_color_title"
+            android:summary="%s"
+            android:entries="@array/yozakura_charging_color_entries"
+            android:entryValues="@array/yozakura_charging_color_values"
+            android:defaultValue="0" />
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingListPreference
+            android:key="charging_ripple_opacity"
+            android:title="@string/yozakura_charging_ripple_title"
+            android:summary="%s"
+            android:entries="@array/yozakura_charging_percent_entries"
+            android:entryValues="@array/yozakura_charging_percent_values"
+            android:defaultValue="60" />
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingListPreference
+            android:key="charging_glow_intensity"
+            android:title="@string/yozakura_charging_glow_title"
+            android:summary="%s"
+            android:entries="@array/yozakura_charging_percent_entries"
+            android:entryValues="@array/yozakura_charging_percent_values"
+            android:defaultValue="80" />
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingListPreference
+            android:key="charging_arc_count"
+            android:title="@string/yozakura_charging_arc_title"
+            android:summary="%s"
+            android:entries="@array/yozakura_charging_arc_entries"
+            android:entryValues="@array/yozakura_charging_arc_entries"
+            android:defaultValue="3" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
