@@ -12,4 +12,39 @@
     <string name="yozakura_dynamic_bar_compact_notifications_title">Route notifications to the bar</string>
     <string name="yozakura_dynamic_bar_compact_notifications_summary">Show incoming notifications as a compact Dynamic Bar pill instead of a heads-up banner</string>
     <string name="yozakura_dynamic_bar_footer">The Dynamic Bar shows live activity (charging, media, flashlight and more) as a compact pill. When off, the status bar, lock screen and notifications behave exactly as before.</string>
+
+    <!-- cp110: lock screen battery chip mode -->
+    <string name="yozakura_dynamic_bar_battery_chip_title">Battery info on lock screen</string>
+    <string name="yozakura_dynamic_bar_battery_chip_disabled">Never show</string>
+    <string name="yozakura_dynamic_bar_battery_chip_charging">Only when charging</string>
+    <string name="yozakura_dynamic_bar_battery_chip_always">Always show</string>
+
+    <!-- cp110: per-event toggles -->
+    <string name="yozakura_dynamic_bar_events_title">Events</string>
+    <string name="yozakura_dynamic_bar_event_media">Media</string>
+    <string name="yozakura_dynamic_bar_event_call">Call</string>
+    <string name="yozakura_dynamic_bar_event_charging">Charging</string>
+    <string name="yozakura_dynamic_bar_event_notification">Notifications</string>
+    <string name="yozakura_dynamic_bar_event_timer">Timer</string>
+    <string name="yozakura_dynamic_bar_event_alarm">Alarm</string>
+    <string name="yozakura_dynamic_bar_event_stopwatch">Stopwatch</string>
+    <string name="yozakura_dynamic_bar_event_bluetooth">Bluetooth</string>
+    <string name="yozakura_dynamic_bar_event_hotspot">Hotspot</string>
+    <string name="yozakura_dynamic_bar_event_ringer">Ringer mode</string>
+    <string name="yozakura_dynamic_bar_event_vpn">VPN</string>
+    <string name="yozakura_dynamic_bar_event_clipboard">Clipboard</string>
+    <string name="yozakura_dynamic_bar_event_torch">Flashlight</string>
+    <string name="yozakura_dynamic_bar_event_audio_recording">Audio recording</string>
+    <string name="yozakura_dynamic_bar_event_biometric_unlock">Biometric unlock</string>
+
+    <string-array name="yozakura_dynamic_bar_battery_chip_entries" translatable="false">
+        <item>@string/yozakura_dynamic_bar_battery_chip_disabled</item>
+        <item>@string/yozakura_dynamic_bar_battery_chip_charging</item>
+        <item>@string/yozakura_dynamic_bar_battery_chip_always</item>
+    </string-array>
+    <string-array name="yozakura_dynamic_bar_battery_chip_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 </resources>

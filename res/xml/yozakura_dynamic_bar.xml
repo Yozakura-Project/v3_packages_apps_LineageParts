@@ -3,12 +3,11 @@
      SPDX-FileCopyrightText: The YozakuraOS Project
      SPDX-License-Identifier: Apache-2.0
 
-     YozakuraOS cp109: DynamicBar (Dynamic Island) settings page. All controls are
-     self-binding preferences that persist to android Settings.Secure using the same
-     keys AxDynamicBarSettings observes in SystemUI. The master switch and the two
-     sub-switches use the bare (non-"Lineage") lineageos.preference widgets, which
-     target android Settings.Secure; a Lineage* widget would write to lineagesettings
-     and the consumer (which reads Settings.Secure) would never see it (cf. cp102).
+     YozakuraOS cp109/cp110: DynamicBar (Dynamic Island) settings page. Switches and the
+     master persist to android Settings.Secure via the bare (non-"Lineage") lineageos.preference
+     widgets and the in-tree list widget, matching the keys AxDynamicBarSettings observes.
+     The per-event toggles are plain SwitchPreferenceCompat driven by YozakuraDynamicBarFragment,
+     which mirrors their state into the ax_dynamic_bar_events JSON array of disabled event ids.
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -26,12 +25,43 @@
         android:defaultValue="true"
         android:dependency="ax_dynamic_bar_enabled" />
 
+    <org.yozakuraos.yozakuraparts.preference.SecureSettingListPreference
+        android:key="ax_dynamic_bar_keyguard_battery_chip_mode"
+        android:title="@string/yozakura_dynamic_bar_battery_chip_title"
+        android:entries="@array/yozakura_dynamic_bar_battery_chip_entries"
+        android:entryValues="@array/yozakura_dynamic_bar_battery_chip_values"
+        android:defaultValue="1"
+        android:dependency="ax_dynamic_bar_keyguard_enabled" />
+
     <lineageos.preference.SecureSettingSwitchPreference
         android:key="ax_dynamic_bar_compact_notifications"
         android:title="@string/yozakura_dynamic_bar_compact_notifications_title"
         android:summary="@string/yozakura_dynamic_bar_compact_notifications_summary"
         android:defaultValue="true"
         android:dependency="ax_dynamic_bar_enabled" />
+
+    <PreferenceCategory
+        android:key="yozakura_dynamic_bar_events_category"
+        android:title="@string/yozakura_dynamic_bar_events_title"
+        android:dependency="ax_dynamic_bar_enabled">
+
+        <SwitchPreferenceCompat android:key="event_media"            android:title="@string/yozakura_dynamic_bar_event_media"            android:defaultValue="true" />
+        <SwitchPreferenceCompat android:key="event_call"             android:title="@string/yozakura_dynamic_bar_event_call"             android:defaultValue="true" />
+        <SwitchPreferenceCompat android:key="event_charging"         android:title="@string/yozakura_dynamic_bar_event_charging"         android:defaultValue="true" />
+        <SwitchPreferenceCompat android:key="event_notification"     android:title="@string/yozakura_dynamic_bar_event_notification"     android:defaultValue="true" />
+        <SwitchPreferenceCompat android:key="event_timer"            android:title="@string/yozakura_dynamic_bar_event_timer"            android:defaultValue="true" />
+        <SwitchPreferenceCompat android:key="event_alarm"            android:title="@string/yozakura_dynamic_bar_event_alarm"            android:defaultValue="true" />
+        <SwitchPreferenceCompat android:key="event_stopwatch"        android:title="@string/yozakura_dynamic_bar_event_stopwatch"        android:defaultValue="true" />
+        <SwitchPreferenceCompat android:key="event_bluetooth"        android:title="@string/yozakura_dynamic_bar_event_bluetooth"        android:defaultValue="true" />
+        <SwitchPreferenceCompat android:key="event_hotspot"          android:title="@string/yozakura_dynamic_bar_event_hotspot"          android:defaultValue="true" />
+        <SwitchPreferenceCompat android:key="event_ringer"           android:title="@string/yozakura_dynamic_bar_event_ringer"           android:defaultValue="true" />
+        <SwitchPreferenceCompat android:key="event_vpn"              android:title="@string/yozakura_dynamic_bar_event_vpn"              android:defaultValue="true" />
+        <SwitchPreferenceCompat android:key="event_clipboard"        android:title="@string/yozakura_dynamic_bar_event_clipboard"        android:defaultValue="true" />
+        <SwitchPreferenceCompat android:key="event_torch"            android:title="@string/yozakura_dynamic_bar_event_torch"            android:defaultValue="true" />
+        <SwitchPreferenceCompat android:key="event_audio_recording"  android:title="@string/yozakura_dynamic_bar_event_audio_recording"  android:defaultValue="true" />
+        <SwitchPreferenceCompat android:key="event_biometric_unlock" android:title="@string/yozakura_dynamic_bar_event_biometric_unlock" android:defaultValue="true" />
+
+    </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference
         android:key="yozakura_dynamic_bar_footer"
