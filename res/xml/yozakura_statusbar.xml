@@ -4,6 +4,13 @@
     android:key="yozakura_statusbar"
     android:title="@string/yozakura_statusbar_category">
 
+    <!-- YozakuraOS cp109: DynamicBar (Dynamic Island) settings -->
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.yozakura.YozakuraDynamicBarFragment"
+        android:key="yozakura_dynamic_bar"
+        android:title="@string/yozakura_dynamic_bar_title"
+        android:summary="@string/yozakura_dynamic_bar_summary" />
+
     <!-- YozakuraOS cp71: expose LineageOS Network traffic monitor in the Yozakura status bar menu -->
     <Preference
         android:fragment="org.yozakuraos.yozakuraparts.statusbar.NetworkTrafficSettings"

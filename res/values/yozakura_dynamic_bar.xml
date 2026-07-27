@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The YozakuraOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="yozakura_dynamic_bar_title">Dynamic Bar</string>
+    <string name="yozakura_dynamic_bar_summary">Dynamic Island-style pill in the status bar, lock screen and for notifications</string>
+    <string name="yozakura_dynamic_bar_switch_title">Use Dynamic Bar</string>
+    <string name="yozakura_dynamic_bar_keyguard_title">Show on lock screen</string>
+    <string name="yozakura_dynamic_bar_keyguard_summary">Render the Dynamic Bar chip on the lock screen</string>
+    <string name="yozakura_dynamic_bar_compact_notifications_title">Route notifications to the bar</string>
+    <string name="yozakura_dynamic_bar_compact_notifications_summary">Show incoming notifications as a compact Dynamic Bar pill instead of a heads-up banner</string>
+    <string name="yozakura_dynamic_bar_footer">The Dynamic Bar shows live activity (charging, media, flashlight and more) as a compact pill. When off, the status bar, lock screen and notifications behave exactly as before.</string>
+</resources>
