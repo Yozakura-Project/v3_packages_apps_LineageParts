@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The YozakuraOS Project
+     SPDX-License-Identifier: Apache-2.0
+
+     YozakuraOS cp102: Smart Pixels settings page. Both controls are self-binding
+     preferences that persist to android's Settings.Secure using the same keys
+     (smart_pixel_filter_enabled / _percent) that SmartPixelSettings observes in
+     SystemUI, so no fragment glue is required. Structure mirrors InfinitySuite
+     res/xml/smart_pixels.xml, but the percent control uses coarse presets instead
+     of Infinity's support-lib seek bar, to avoid pulling in an external library.
+     The QS long-press dialog still offers the fine-grained slider.
+
+     Provider note: the percent list uses the in-tree
+     org.yozakuraos.yozakuraparts.preference.SecureSettingListPreference, NOT
+     lineageos.preference.LineageSecureSettingListPreference. The lineage "List"
+     widgets persist to the lineagesettings provider, but SmartPixelSettings reads
+     android's Settings.Secure, so a Lineage* list would silently write to the
+     wrong store and the percent would never take effect (verified on Cuttlefish).
+     The master switch keeps lineageos.preference.SecureSettingMainSwitchPreference
+     because that bare (non-"Lineage") widget already targets android Settings.Secure.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="yozakura_smart_pixels"
+    android:title="@string/smart_pixels_title">
+
+    <lineageos.preference.SecureSettingMainSwitchPreference
+        android:key="smart_pixel_filter_enabled"
+        android:title="@string/smart_pixels_switch_title" />
+
+    <org.yozakuraos.yozakuraparts.preference.SecureSettingListPreference
+        android:key="smart_pixel_filter_percent"
+        android:title="@string/smart_pixels_percent_title"
+        android:entries="@array/smart_pixels_percent_entries"
+        android:entryValues="@array/smart_pixels_percent_values"
+        android:defaultValue="25"
+        android:dependency="smart_pixel_filter_enabled" />
+
+    <com.android.settingslib.widget.FooterPreference
+        android:key="smart_pixels_footer"
+        android:title="@string/smart_pixels_warning_text"
+        android:selectable="false" />
+
+</PreferenceScreen>

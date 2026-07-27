@@ -21,6 +21,13 @@
         android:title="@string/long_screen_settings_title" />
 
 
+    <!-- YozakuraOS cp102: Smart Pixels burn-in protection settings -->
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.yozakura.YozakuraSmartPixelsFragment"
+        android:key="yozakura_smart_pixels"
+        android:title="@string/smart_pixels_title"
+        android:summary="@string/smart_pixels_summary" />
+
     <!-- YozakuraOS cp78: advanced Monet engine controls -->
     <Preference
         android:fragment="org.yozakuraos.yozakuraparts.yozakura.YozakuraMonetFragment"

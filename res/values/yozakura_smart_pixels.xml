@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The YozakuraOS Project
+     SPDX-License-Identifier: Apache-2.0
+
+     Strings for the Smart Pixels settings page (YozakuraOS cp102). Kept in their
+     own file so upstream LineageParts string files stay conflict-free on re-sync.
+-->
+<resources>
+
+    <string name="smart_pixels_title">Smart Pixels</string>
+    <string name="smart_pixels_summary">Reduce OLED burn-in by dimming a rotating fraction of pixels</string>
+    <string name="smart_pixels_switch_title">Use Smart Pixels</string>
+    <string name="smart_pixels_percent_title">Pixel percentage</string>
+    <string name="smart_pixels_warning_text">Smart Pixels dims a portion of the screen’s pixels on a rotating pattern to reduce the risk of OLED burn-in. A higher percentage offers more protection but is more noticeable.</string>
+
+    <string-array name="smart_pixels_percent_entries" translatable="false">
+        <item>10%</item>
+        <item>15%</item>
+        <item>20%</item>
+        <item>25%</item>
+        <item>30%</item>
+        <item>35%</item>
+        <item>40%</item>
+        <item>45%</item>
+        <item>50%</item>
+        <item>55%</item>
+        <item>60%</item>
+        <item>65%</item>
+        <item>70%</item>
+        <item>75%</item>
+    </string-array>
+
+    <string-array name="smart_pixels_percent_values" translatable="false">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+        <item>65</item>
+        <item>70</item>
+        <item>75</item>
+    </string-array>
+
+</resources>
