@@ -11,6 +11,13 @@
         android:title="@string/yozakura_dynamic_bar_title"
         android:summary="@string/yozakura_dynamic_bar_summary" />
 
+    <!-- YozakuraOS cp113: status bar logo settings (logo ported in cp112) -->
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.yozakura.YozakuraLogoFragment"
+        android:key="yozakura_logo"
+        android:title="@string/yozakura_logo_title"
+        android:summary="@string/yozakura_logo_summary" />
+
     <!-- YozakuraOS cp71: expose LineageOS Network traffic monitor in the Yozakura status bar menu -->
     <Preference
         android:fragment="org.yozakuraos.yozakuraparts.statusbar.NetworkTrafficSettings"
