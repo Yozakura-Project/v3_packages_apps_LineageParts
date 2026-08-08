@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The YozakuraOS Project
+     SPDX-License-Identifier: Apache-2.0
+
+     Titles and defaults mirror the Infinity (Lunaris AOSP) cutout_progress_settings
+     page so the exposed controls match the ported SystemUI behaviour exactly.
+-->
+<resources>
+    <string name="cutout_progress_title">Cutout Progress Ring</string>
+    <string name="cutout_progress_summary">Progress ring around the punch-hole camera for media, downloads and charging</string>
+    <string name="cutout_progress_enabled_title">Enable cutout progress ring</string>
+    <string name="cutout_progress_footer">The ring is drawn around the punch-hole camera. When off, nothing is drawn and no overlay window is created.</string>
+
+    <string name="cutout_progress_ring_color_mode_title">Ring color</string>
+    <string name="cutout_progress_ring_color_mode_accent">Accent</string>
+    <string name="cutout_progress_ring_color_mode_rainbow">Rainbow</string>
+    <string name="cutout_progress_ring_color_mode_custom">Custom</string>
+    <string name="cutout_progress_opacity_title">Ring opacity</string>
+    <string name="cutout_progress_stroke_width_title">Stroke width</string>
+    <string name="cutout_progress_ring_gap_title">Ring gap (cutout clearance)</string>
+
+    <string name="cutout_progress_cat_battery">Battery ring</string>
+    <string name="cutout_progress_battery_indicator_title">Show battery indicator</string>
+    <string name="cutout_progress_battery_indicator_summary">Display battery level as a symmetric ring around the cutout when charging or fully charged</string>
+    <string name="cutout_progress_charging_ring_title">Show charging ring</string>
+    <string name="cutout_progress_charging_ring_summary">Display battery level as a symmetric ring around the cutout while charging</string>
+    <string name="cutout_progress_charging_pulse_title">Charging pulse animation</string>
+    <string name="cutout_progress_charging_pulse_summary">Animate a repeating pulse from center outward while charging</string>
+
+    <string name="cutout_progress_cat_music">Music ring</string>
+    <string name="cutout_progress_music_title">Enable music ring</string>
+    <string name="cutout_progress_music_summary">Show a visualizer ring tracking current media playback</string>
+    <string name="cutout_progress_music_color_mode_title">Color mode</string>
+    <string name="cutout_progress_music_color_mode_album_icon">Album icon color</string>
+    <string name="cutout_progress_music_color_mode_accent">System accent</string>
+    <string name="cutout_progress_music_color_mode_album_art">Album art</string>
+    <string name="cutout_progress_music_color_mode_custom">Custom color</string>
+    <string name="cutout_progress_music_opacity_title">Ring opacity</string>
+    <string name="cutout_progress_music_stroke_title">Stroke width</string>
+    <string name="cutout_progress_music_clockwise_title">Clockwise direction</string>
+
+    <string name="cutout_progress_cat_behaviour">Behaviour</string>
+    <string name="cutout_progress_clockwise_title">Clockwise direction</string>
+    <string name="cutout_progress_clockwise_summary">Fill the ring clockwise; disable for counter-clockwise</string>
+    <string name="cutout_progress_min_vis_title">Minimum display time</string>
+    <string name="cutout_progress_min_vis_summary">Keep ring visible for a minimum duration so brief downloads don\'t flash</string>
+    <string name="cutout_progress_min_vis_ms_title">Minimum duration</string>
+    <string name="cutout_progress_easing_title">Progress easing</string>
+
+    <string-array name="cutout_progress_ring_color_mode_entries">
+        <item>@string/cutout_progress_ring_color_mode_accent</item>
+        <item>@string/cutout_progress_ring_color_mode_rainbow</item>
+        <item>@string/cutout_progress_ring_color_mode_custom</item>
+    </string-array>
+    <string-array name="cutout_progress_ring_color_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="cutout_progress_music_color_mode_entries">
+        <item>@string/cutout_progress_music_color_mode_album_icon</item>
+        <item>@string/cutout_progress_music_color_mode_accent</item>
+        <item>@string/cutout_progress_music_color_mode_album_art</item>
+        <item>@string/cutout_progress_music_color_mode_custom</item>
+    </string-array>
+    <string-array name="cutout_progress_music_color_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="cutout_progress_easing_entries" translatable="false">
+        <item>Linear</item>
+        <item>Accelerate</item>
+        <item>Decelerate</item>
+        <item>Ease in–out</item>
+    </string-array>
+    <string-array name="cutout_progress_easing_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>

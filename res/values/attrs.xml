@@ -17,4 +17,14 @@
     </declare-styleable>
 
     <attr name="wifi_signal_color" format="reference" />
+
+    <!-- YozakuraOS cp115: attributes for the ported CustomSeekBarPreference. -->
+    <declare-styleable name="CustomSeekBarPreference">
+        <attr name="min" format="integer" />
+        <attr name="interval" format="integer" />
+        <attr name="showSign" format="boolean" />
+        <attr name="units" format="string|reference" />
+        <attr name="continuousUpdates" format="boolean" />
+        <attr name="allowEditText" format="boolean" />
+    </declare-styleable>
 </resources>

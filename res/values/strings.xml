@@ -811,4 +811,10 @@
     <string name="yozakura_charging_ripple_title">Ripple opacity</string>
     <string name="yozakura_charging_glow_title">Glow intensity</string>
     <string name="yozakura_charging_arc_title">Arc count</string>
+
+    <!-- YozakuraOS cp115: strings for the ported CustomSeekBarPreference. -->
+    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">Default</string>
+    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong press to set</string>
+    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
 </resources>

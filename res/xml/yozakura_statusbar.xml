@@ -18,6 +18,13 @@
         android:title="@string/yozakura_logo_title"
         android:summary="@string/yozakura_logo_summary" />
 
+    <!-- YozakuraOS cp115: cutout progress ring settings (ring ported in cp114) -->
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.yozakura.YozakuraCutoutProgressFragment"
+        android:key="yozakura_cutout_progress"
+        android:title="@string/cutout_progress_title"
+        android:summary="@string/cutout_progress_summary" />
+
     <!-- YozakuraOS cp71: expose LineageOS Network traffic monitor in the Yozakura status bar menu -->
     <Preference
         android:fragment="org.yozakuraos.yozakuraparts.statusbar.NetworkTrafficSettings"
