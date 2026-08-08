@@ -33,6 +33,11 @@ public class YozakuraCutoutProgressFragment extends SettingsPreferenceFragment {
         "cutout_progress_ring_color_mode",
         "cutout_progress_music_color_mode",
         "cutout_progress_easing",
+        // cp116
+        "cutout_progress_finish_style",
+        "cutout_progress_percent_position",
+        "cutout_progress_filename_position",
+        "cutout_progress_filename_truncate",
     };
 
     @Override
