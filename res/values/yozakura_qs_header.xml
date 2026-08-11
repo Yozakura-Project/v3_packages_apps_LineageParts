@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The YozakuraOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="yozakura_qs_header_title">QS header image</string>
+    <string name="yozakura_qs_header_summary">Show an image at the top of the quick settings panel</string>
+    <string name="yozakura_qs_header_switch_title">Show header image</string>
+    <string name="yozakura_qs_header_footer">The image is drawn behind the top of the quick settings panel and fades out along its bottom edge. It follows the shade as you pull it down, and is hidden in landscape.</string>
+
+    <string name="yozakura_qs_header_source_title">Image source</string>
+    <string name="yozakura_qs_header_source_daylight">Header pack (changes with the time of day)</string>
+    <string name="yozakura_qs_header_source_file">Picture from the gallery</string>
+
+    <string name="yozakura_qs_header_pack_title">Header pack</string>
+
+    <string name="yozakura_qs_header_pick_title">Choose a picture</string>
+    <string name="yozakura_qs_header_pick_summary">Pick an image to use as the header</string>
+    <string name="yozakura_qs_header_pick_none">No picture chosen yet</string>
+    <string name="yozakura_qs_header_pick_failed">Could not read that picture</string>
+    <string name="yozakura_qs_header_pick_no_gallery">No app available to pick a picture</string>
+
+    <string name="yozakura_qs_header_height_title">Height</string>
+    <string name="yozakura_qs_header_shadow_title">Shadow</string>
+    <string name="yozakura_qs_header_shadow_summary">Darkens the image behind the quick settings</string>
+</resources>

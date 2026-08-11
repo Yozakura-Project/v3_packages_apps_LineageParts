@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The YozakuraOS Project
+     SPDX-License-Identifier: Apache-2.0
+
+     YozakuraOS cp121c: QS header image settings. The image itself was ported in cp121a and
+     wired into the shade in cp121b (SystemUI com.android.systemui.infinity.header), gated
+     by Settings.System status_bar_custom_header (default off).
+
+     Keys, ranges and defaults mirror Infinity's QsHeaderImageSettings so the controls match
+     what StatusBarHeaderMachine and NotificationPanelViewController actually read. Height
+     and shadow persist to android Settings.System through the in-tree System* widgets; the
+     source and pack lists are persistent="false" and driven by YozakuraQsHeaderFragment,
+     which builds their entries at runtime.
+
+     Two of Infinity's rows are deliberately absent. Its "static" source names a drawable as
+     "package/name", and its Browse row opens org.omnirom.omnistyle - the header pack app,
+     which is not in this tree. Neither can be given a value from here, so shipping them
+     would be shipping controls that cannot work.
+
+     The "settings" namespace is required by CustomSeekBarPreference, which reads min /
+     interval / units from it.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:key="yozakura_qs_header"
+    android:title="@string/yozakura_qs_header_title">
+
+    <lineageos.preference.SystemSettingMainSwitchPreference
+        android:key="status_bar_custom_header"
+        android:title="@string/yozakura_qs_header_switch_title"
+        android:defaultValue="false" />
+
+    <ListPreference
+        android:key="qs_header_source"
+        android:title="@string/yozakura_qs_header_source_title"
+        android:persistent="false"
+        android:dependency="status_bar_custom_header" />
+
+    <ListPreference
+        android:key="daylight_header_pack"
+        android:title="@string/yozakura_qs_header_pack_title"
+        android:persistent="false"
+        android:dependency="status_bar_custom_header" />
+
+    <Preference
+        android:key="file_header_select"
+        android:title="@string/yozakura_qs_header_pick_title"
+        android:summary="@string/yozakura_qs_header_pick_summary"
+        android:persistent="false"
+        android:dependency="status_bar_custom_header" />
+
+    <org.yozakuraos.yozakuraparts.preference.SystemSettingSeekBarPreference
+        android:key="status_bar_custom_header_height"
+        android:title="@string/yozakura_qs_header_height_title"
+        android:max="200"
+        settings:min="100"
+        settings:interval="1"
+        settings:units=" dp"
+        android:defaultValue="142"
+        android:dependency="status_bar_custom_header" />
+
+    <org.yozakuraos.yozakuraparts.preference.SystemSettingSeekBarPreference
+        android:key="status_bar_custom_header_shadow"
+        android:title="@string/yozakura_qs_header_shadow_title"
+        android:summary="@string/yozakura_qs_header_shadow_summary"
+        android:max="200"
+        settings:min="0"
+        settings:interval="1"
+        android:defaultValue="0"
+        android:dependency="status_bar_custom_header" />
+
+    <Preference
+        android:key="yozakura_qs_header_footer"
+        android:selectable="false"
+        android:summary="@string/yozakura_qs_header_footer" />
+
+</PreferenceScreen>

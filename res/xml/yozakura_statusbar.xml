@@ -18,6 +18,13 @@
         android:title="@string/yozakura_logo_title"
         android:summary="@string/yozakura_logo_summary" />
 
+    <!-- YozakuraOS cp121c: QS header image settings (image ported in cp121a/cp121b) -->
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.yozakura.YozakuraQsHeaderFragment"
+        android:key="yozakura_qs_header"
+        android:title="@string/yozakura_qs_header_title"
+        android:summary="@string/yozakura_qs_header_summary" />
+
     <!-- YozakuraOS cp115: cutout progress ring settings (ring ported in cp114) -->
     <Preference
         android:fragment="org.yozakuraos.yozakuraparts.yozakura.YozakuraCutoutProgressFragment"
