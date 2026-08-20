@@ -823,7 +823,7 @@
     <string name="ts_download_latest_keybox_title">Download latest keybox.xml file</string>
     <string name="ts_download_latest_keybox_summary">Fetch the latest available keybox.xml file from community. This feature only downloads the latest available keybox file and doesn\'t verify whether it\'s valid, revoked, or soft-banned. It does not communicate with any Google attestation or revocation endpoints.</string>
     <string name="ts_download_keybox_error">Error while downloading keybox file, Check your internet connection before trying again</string>
-    <string name="ts_download_keybox_success">keybox.xml file saved at /sdcard/InfinityResources folder.</string>
+    <string name="ts_download_keybox_success">keybox.xml file saved at /sdcard/YozakuraResources folder.</string>
     <string name="ts_import_keybox">Import keybox</string>
     <string name="ts_no_keybox">No keybox installed</string>
     <string name="ts_keybox_installed">Keybox installed</string>

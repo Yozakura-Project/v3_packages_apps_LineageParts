@@ -351,7 +351,7 @@ public class TrickyStore extends SettingsPreferenceFragment {
     }
 
     private boolean downloadLatestKeyboxFile() {
-        File outputDir = new File(Environment.getExternalStorageDirectory(), "InfinityResources");
+        File outputDir = new File(Environment.getExternalStorageDirectory(), "YozakuraResources");
         if (!outputDir.exists() && !outputDir.mkdirs()) {
             return false;
         }
