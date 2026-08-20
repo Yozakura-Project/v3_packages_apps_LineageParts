@@ -32,4 +32,9 @@
         android:key="trust_interface"
         android:title="@string/trust_title" />
 
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.trickystore.TrickyStore"
+        android:key="trickystore"
+        android:title="@string/tricky_store_title" />
+
 </PreferenceScreen>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: crDroid Android Project
+     SPDX-FileCopyrightText: 2026 YozakuraOS
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/tricky_store_title">
+
+    <PreferenceCategory
+        android:key="ts_keybox_category"
+        android:title="@string/ts_keybox_management">
+
+        <Preference
+            android:key="ts_download_latest_keybox"
+            android:title="@string/ts_download_latest_keybox_title"
+            android:summary="@string/ts_download_latest_keybox_summary" />
+
+        <Preference
+            android:key="ts_import_keybox"
+            android:title="@string/ts_import_keybox"
+            android:summary="@string/ts_no_keybox" />
+
+        <Preference
+            android:key="ts_delete_keybox"
+            android:title="@string/ts_delete_keybox"
+            android:summary="@string/ts_delete_keybox_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="ts_target_category"
+        android:title="@string/ts_target_configuration">
+
+        <Preference
+            android:key="ts_import_targets"
+            android:title="@string/ts_import_target_list"
+            android:summary="@string/ts_import_target_list_summary" />
+
+        <Preference
+            android:key="ts_verification_mode"
+            android:title="@string/ts_verification_mode"
+            android:summary="@string/ts_verification_mode_auto"
+            android:enabled="false"
+            android:selectable="false" />
+
+        <Preference
+            android:key="ts_security_patch"
+            android:title="@string/ts_security_patch"
+            android:summary="@string/ts_no_patch" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="ts_footer_category"
+        android:title="@string/ts_footer_title">
+
+        <com.android.settingslib.widget.FooterPreference
+            android:key="ts_footer"
+            android:title="@string/ts_footer_body"
+            android:selectable="false" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
