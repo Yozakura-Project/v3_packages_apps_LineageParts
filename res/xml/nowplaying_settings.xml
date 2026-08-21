@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The YozakuraOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:key="nowplaying_settings"
+    android:title="@string/nowplaying_title">
+
+    <lineageos.preference.SystemSettingMainSwitchPreference
+        android:key="nowplaying_enabled"
+        android:title="@string/nowplaying_enabled_title"
+        android:summary="@string/nowplaying_enabled_summary"
+        android:defaultValue="false" />
+
+    <PreferenceCategory
+        android:title="@string/nowplaying_cat_appearance">
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingListPreference
+            android:key="nowplaying_icon_style"
+            android:title="@string/nowplaying_icon_style_title"
+            android:entries="@array/nowplaying_icon_style_entries"
+            android:entryValues="@array/nowplaying_icon_style_values"
+            android:defaultValue="0"
+            settings:dependency="nowplaying_enabled" />
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingSeekBarPreference
+            android:key="nowplaying_icon_size"
+            android:title="@string/nowplaying_icon_size_title"
+            android:max="40"
+            settings:min="5"
+            settings:interval="1"
+            settings:units=" dp"
+            android:defaultValue="24"
+            settings:dependency="nowplaying_enabled" />
+
+        <SwitchPreferenceCompat
+            android:key="nowplaying_use_compact_style"
+            android:title="@string/nowplaying_compact_title"
+            android:summary="@string/nowplaying_compact_summary"
+            android:defaultValue="false"
+            settings:dependency="nowplaying_enabled" />
+
+        <SwitchPreferenceCompat
+            android:key="nowplaying_use_accent_color"
+            android:title="@string/nowplaying_accent_title"
+            android:summary="@string/nowplaying_accent_summary"
+            android:defaultValue="false"
+            settings:dependency="nowplaying_enabled" />
+
+        <SwitchPreferenceCompat
+            android:key="media_waveform_seekbar"
+            android:title="@string/nowplaying_waveform_title"
+            android:summary="@string/nowplaying_waveform_summary"
+            android:defaultValue="false"
+            settings:dependency="nowplaying_enabled" />
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingSeekBarPreference
+            android:key="nowplaying_track_text_size"
+            android:title="@string/nowplaying_track_size_title"
+            android:max="24"
+            settings:min="8"
+            settings:interval="1"
+            settings:units=" sp"
+            android:defaultValue="14"
+            settings:dependency="nowplaying_enabled" />
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingSeekBarPreference
+            android:key="nowplaying_artist_text_size"
+            android:title="@string/nowplaying_artist_size_title"
+            android:max="20"
+            settings:min="5"
+            settings:interval="1"
+            settings:units=" sp"
+            android:defaultValue="12"
+            settings:dependency="nowplaying_enabled" />
+
+        <org.yozakuraos.yozakuraparts.preference.SystemSettingSeekBarPreference
+            android:key="nowplaying_vertical_position"
+            android:title="@string/nowplaying_position_title"
+            android:max="100"
+            settings:min="10"
+            settings:interval="1"
+            settings:units=" %"
+            android:defaultValue="98"
+            settings:dependency="nowplaying_enabled" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/nowplaying_cat_visibility">
+
+        <SwitchPreferenceCompat
+            android:key="nowplaying_show_on_lockscreen"
+            android:title="@string/nowplaying_lockscreen_title"
+            android:summary="@string/nowplaying_lockscreen_summary"
+            android:defaultValue="true"
+            settings:dependency="nowplaying_enabled" />
+
+        <SwitchPreferenceCompat
+            android:key="nowplaying_show_on_aod"
+            android:title="@string/nowplaying_aod_title"
+            android:summary="@string/nowplaying_aod_summary"
+            android:defaultValue="true"
+            settings:dependency="nowplaying_enabled" />
+
+        <SwitchPreferenceCompat
+            android:key="nowplaying_tap_to_expand"
+            android:title="@string/nowplaying_tap_title"
+            android:summary="@string/nowplaying_tap_summary"
+            android:defaultValue="true"
+            settings:dependency="nowplaying_enabled" />
+    </PreferenceCategory>
+</PreferenceScreen>

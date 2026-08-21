@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The YozakuraOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="nowplaying_title">Now Playing overlay</string>
+    <string name="nowplaying_summary">Show currently playing media on the lockscreen and status bar</string>
+
+    <string name="nowplaying_enabled_title">Enable Now Playing overlay</string>
+    <string name="nowplaying_enabled_summary">Display the current track with an animated seekbar</string>
+
+    <string name="nowplaying_cat_appearance">Appearance</string>
+    <string name="nowplaying_cat_visibility">Visibility</string>
+
+    <string name="nowplaying_icon_style_title">Icon style</string>
+    <string-array name="nowplaying_icon_style_entries">
+        <item>None</item>
+        <item>App icon</item>
+        <item>Music note</item>
+    </string-array>
+    <string-array name="nowplaying_icon_style_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string name="nowplaying_icon_size_title">Icon size</string>
+    <string name="nowplaying_compact_title">Compact style</string>
+    <string name="nowplaying_compact_summary">Show track and artist on a single line</string>
+    <string name="nowplaying_accent_title">Use accent color</string>
+    <string name="nowplaying_accent_summary">Tint the overlay with the system accent color</string>
+    <string name="nowplaying_waveform_title">Waveform seekbar</string>
+    <string name="nowplaying_waveform_summary">Animate the progress bar as a squiggly waveform</string>
+    <string name="nowplaying_track_size_title">Track text size</string>
+    <string name="nowplaying_artist_size_title">Artist text size</string>
+    <string name="nowplaying_position_title">Vertical position</string>
+
+    <string name="nowplaying_lockscreen_title">Show on lockscreen</string>
+    <string name="nowplaying_lockscreen_summary">Display the overlay while the device is locked</string>
+    <string name="nowplaying_aod_title">Show on Always-on display</string>
+    <string name="nowplaying_aod_summary">Display the overlay on the Always-on display</string>
+    <string name="nowplaying_tap_title">Tap to expand</string>
+    <string name="nowplaying_tap_summary">Tap the overlay to show album art and media controls</string>
+</resources>

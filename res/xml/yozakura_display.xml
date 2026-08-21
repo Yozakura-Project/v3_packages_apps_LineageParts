@@ -41,4 +41,10 @@
         android:title="@string/video_wallpaper_title"
         android:summary="@string/video_wallpaper_category_summary" />
 
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.nowplaying.NowPlayingSettingsFragment"
+        android:key="nowplaying_settings"
+        android:title="@string/nowplaying_title"
+        android:summary="@string/nowplaying_summary" />
+
 </PreferenceScreen>
