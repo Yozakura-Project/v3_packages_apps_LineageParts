@@ -35,4 +35,10 @@
         android:title="@string/yozakura_monet_title"
         android:summary="@string/yozakura_monet_summary" />
 
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.wallpaper.VideoWallpaperFragment"
+        android:key="video_wallpaper"
+        android:title="@string/video_wallpaper_title"
+        android:summary="@string/video_wallpaper_category_summary" />
+
 </PreferenceScreen>
