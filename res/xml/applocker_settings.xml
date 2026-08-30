@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 YozakuraOS
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/applock_title">
+
+    <PreferenceCategory
+        android:key="applock_credential_category"
+        android:title="@string/applock_credential_category">
+
+        <Preference
+            android:key="applock_set_credential"
+            android:title="@string/applock_set_credential"
+            android:summary="@string/applock_credential_none" />
+
+        <Preference
+            android:key="applock_clear_credential"
+            android:title="@string/applock_clear_credential"
+            android:summary="@string/applock_clear_credential_summary" />
+
+        <SwitchPreference
+            android:key="applock_biometric"
+            android:title="@string/applock_biometric"
+            android:summary="@string/applock_biometric_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="applock_prefer_biometric"
+            android:title="@string/applock_prefer_biometric"
+            android:summary="@string/applock_prefer_biometric_summary"
+            android:defaultValue="false"
+            android:dependency="applock_biometric" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="applock_behavior_category"
+        android:title="@string/applock_behavior_category">
+
+        <ListPreference
+            android:key="applock_behavior"
+            android:title="@string/applock_behavior"
+            android:entries="@array/applock_behavior_entries"
+            android:entryValues="@array/applock_behavior_values"
+            android:defaultValue="0" />
+
+        <Preference
+            android:key="applock_timeout"
+            android:title="@string/applock_timeout" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="applock_apps_category"
+        android:title="@string/applock_apps_category">
+
+        <Preference
+            android:fragment="org.yozakuraos.yozakuraparts.applocker.AppLockerAppList"
+            android:key="applock_app_list"
+            android:title="@string/applock_app_list"
+            android:summary="@string/applock_app_list_summary" />
+
+        <Preference
+            android:fragment="org.yozakuraos.yozakuraparts.applocker.AppLockerHiddenList"
+            android:key="applock_hidden_list"
+            android:title="@string/applock_hidden_list"
+            android:summary="@string/applock_hidden_list_summary" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

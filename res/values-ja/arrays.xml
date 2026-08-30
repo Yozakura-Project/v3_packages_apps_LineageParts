@@ -23,4 +23,15 @@
         <item>2026-15-07</item>
         <item>2026/07/15</item>
     </string-array>
+    <!-- AppLocker -->
+    <string-array name="applock_behavior_entries">
+        <item>アプリから離れたとき</item>
+        <item>一定時間が過ぎたとき</item>
+        <item>画面が消えたとき</item>
+        <item>アプリを終了したとき</item>
+    </string-array>
+    <string-array name="applock_credential_type_entries">
+        <item>PIN</item>
+        <item>パスワード</item>
+    </string-array>
 </resources>

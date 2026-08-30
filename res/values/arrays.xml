@@ -1031,4 +1031,21 @@
     <string-array name="yozakura_charging_arc_entries" translatable="false">
         <item>1</item><item>2</item><item>3</item><item>4</item><item>5</item><item>6</item>
     </string-array>
+    <!-- AppLocker: matches AxSandboxManager.LOCK_BEHAVIOR_* ordinals -->
+    <string-array name="applock_behavior_entries">
+        <item>When you leave the app</item>
+        <item>After a timeout</item>
+        <item>When the screen turns off</item>
+        <item>When the app is closed</item>
+    </string-array>
+    <string-array name="applock_behavior_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="applock_credential_type_entries">
+        <item>PIN</item>
+        <item>Password</item>
+    </string-array>
 </resources>

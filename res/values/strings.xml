@@ -852,4 +852,45 @@
     <string name="ts_no_patch">Not set (using device default)</string>
     <string name="ts_footer_title">Passing strong integrity</string>
     <string name="ts_footer_body">1. Obtain a valid keybox XML from a trusted source. Keyboxes are not provided; you must find one yourself.\n2. Tap \"Import keybox\" and load the file. Google Play Services and Google Play Store are added to the target list automatically the first time.\n3. To customize which apps are spoofed, use \"Import target list\" with a target.txt file (one package per line; append ? for leaf mode, ! for cert generation).\n4. Recheck your Play Integrity status.\n\nAlways delete the existing keybox before importing a new one. If Google revokes a keybox, it may still pass device integrity even though strong integrity will fail.</string>
+    <!-- AppLocker (AxSandbox per-app lock) -->
+    <string name="applock_title">App lock</string>
+    <string name="applock_summary">Require a credential before locked apps open</string>
+
+    <string name="applock_credential_category">Credential</string>
+    <string name="applock_set_credential">Set credential</string>
+    <string name="applock_credential_none">Not set - locked apps open for anyone</string>
+    <string name="applock_credential_pin">PIN</string>
+    <string name="applock_credential_password">Password</string>
+    <string name="applock_credential_pattern">Pattern</string>
+    <string name="applock_clear_credential">Remove credential</string>
+    <string name="applock_clear_credential_summary">Locked apps will open without asking</string>
+    <string name="applock_clear_confirm">Remove the app lock credential? Locked apps will open for anyone until you set a new one.</string>
+    <string name="applock_credential_saved">Credential saved</string>
+    <string name="applock_confirm_title">Re-enter to confirm</string>
+    <string name="applock_hint_pin">4 digits</string>
+    <string name="applock_hint_password">At least 4 characters</string>
+    <string name="applock_hint_confirm">Enter it again</string>
+    <string name="applock_error_mismatch">They do not match</string>
+    <string name="applock_error_pin_length">The PIN must be exactly 4 digits</string>
+    <string name="applock_error_pin_digits">The PIN must be digits only</string>
+    <string name="applock_error_password_length">The password must be at least 4 characters</string>
+    <string name="applock_error_generic">Could not save</string>
+
+    <string name="applock_biometric">Allow biometric unlock</string>
+    <string name="applock_biometric_summary">Unlock with your fingerprint or face instead of typing</string>
+    <string name="applock_biometric_unavailable">No biometric hardware on this device</string>
+    <string name="applock_prefer_biometric">Ask for biometrics first</string>
+    <string name="applock_prefer_biometric_summary">Show the biometric prompt as soon as a locked app opens</string>
+
+    <string name="applock_behavior_category">Behaviour</string>
+    <string name="applock_behavior">Lock again</string>
+    <string name="applock_timeout">Timeout</string>
+    <string name="applock_timeout_summary">%1$d seconds</string>
+
+    <string name="applock_apps_category">Apps</string>
+    <string name="applock_app_list">Locked apps</string>
+    <string name="applock_app_list_summary">Ask for the credential before these open</string>
+    <string name="applock_hidden_list">Hidden apps</string>
+    <string name="applock_hidden_list_summary">Behave as if these are not installed</string>
+    <string name="applock_service_unavailable">The app lock service is not available on this build</string>
 </resources>

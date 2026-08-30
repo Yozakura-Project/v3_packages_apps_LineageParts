@@ -601,4 +601,45 @@
     <string name="yozakura_volume_left_summary">音量パネルを画面の左側に表示します</string>
     <string name="ls_clock_face_highlight_text">左右にスワイプして時計フェイスをプレビューし、適用をタップ</string>
     <string name="custom_clock_style">時計スタイル</string>
+    <!-- AppLocker -->
+    <string name="applock_title">アプリロック</string>
+    <string name="applock_summary">ロックしたアプリを開く前に認証を求めます</string>
+
+    <string name="applock_credential_category">認証情報</string>
+    <string name="applock_set_credential">認証情報を設定</string>
+    <string name="applock_credential_none">未設定 — ロックしたアプリが誰でも開けます</string>
+    <string name="applock_credential_pin">PIN</string>
+    <string name="applock_credential_password">パスワード</string>
+    <string name="applock_credential_pattern">パターン</string>
+    <string name="applock_clear_credential">認証情報を削除</string>
+    <string name="applock_clear_credential_summary">ロックしたアプリが認証なしで開くようになります</string>
+    <string name="applock_clear_confirm">アプリロックの認証情報を削除しますか。新しく設定するまで、ロックしたアプリは誰でも開けます。</string>
+    <string name="applock_credential_saved">認証情報を保存しました</string>
+    <string name="applock_confirm_title">確認のためもう一度入力</string>
+    <string name="applock_hint_pin">4 桁の数字</string>
+    <string name="applock_hint_password">4 文字以上</string>
+    <string name="applock_hint_confirm">もう一度入力してください</string>
+    <string name="applock_error_mismatch">一致しません</string>
+    <string name="applock_error_pin_length">PIN はちょうど 4 桁にしてください</string>
+    <string name="applock_error_pin_digits">PIN は数字だけにしてください</string>
+    <string name="applock_error_password_length">パスワードは 4 文字以上にしてください</string>
+    <string name="applock_error_generic">保存できませんでした</string>
+
+    <string name="applock_biometric">生体認証で解除する</string>
+    <string name="applock_biometric_summary">入力の代わりに指紋・顔で解除します</string>
+    <string name="applock_biometric_unavailable">この端末には生体認証がありません</string>
+    <string name="applock_prefer_biometric">まず生体認証を出す</string>
+    <string name="applock_prefer_biometric_summary">ロックしたアプリを開いた直後に生体認証を表示します</string>
+
+    <string name="applock_behavior_category">動作</string>
+    <string name="applock_behavior">再びロックする条件</string>
+    <string name="applock_timeout">経過時間</string>
+    <string name="applock_timeout_summary">%1$d 秒</string>
+
+    <string name="applock_apps_category">アプリ</string>
+    <string name="applock_app_list">ロックするアプリ</string>
+    <string name="applock_app_list_summary">開く前に認証情報を求めます</string>
+    <string name="applock_hidden_list">隠すアプリ</string>
+    <string name="applock_hidden_list_summary">インストールされていないかのように振る舞います</string>
+    <string name="applock_service_unavailable">この端末ではアプリロックのサービスを利用できません</string>
 </resources>

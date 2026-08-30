@@ -37,4 +37,10 @@
         android:key="trickystore"
         android:title="@string/tricky_store_title" />
 
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.applocker.AppLockerSettings"
+        android:key="applocker"
+        android:title="@string/applock_title"
+        android:summary="@string/applock_summary" />
+
 </PreferenceScreen>
