@@ -1,188 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 YozakuraOS
+     SPDX-License-Identifier: Apache-2.0
+
+     Bento entry sheet, in the visual language of Infinity's suite: tile size
+     follows the tile's role instead of every entry getting the same box, the
+     surface is neutral so the content supplies the colour, and the tiles that
+     can show live state (Monet swatches, wallpaper, lock clock) do.
+
+     Every row's children add up to the same weight. The previous version mixed
+     a row of 2, a row of 2 + spacer, and a row of 1, which is why the tiles came
+     out at three different widths with dead space on the right.
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingHorizontal="8dp"
-    android:paddingTop="4dp"
-    android:paddingBottom="12dp">
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="8dp">
 
+    <!-- Row A: left column (Monet + wallpaper) beside the tall lock screen preview -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="330dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
 
-        <FrameLayout
-            android:id="@+id/yozakura_tile_statusbar"
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="146dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/yozakura_tile_bg"
-            android:clipToOutline="true"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground">
-            <ImageView android:layout_width="34dp" android:layout_height="34dp"
-                android:layout_gravity="start|top" android:layout_margin="16dp"
-                android:src="@drawable/ic_yozakura_statusbar" android:tint="#FFFFFF"
-                android:contentDescription="@null"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_gravity="start|bottom" android:layout_margin="16dp"
-                android:text="@string/yozakura_statusbar_category"
-                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
-        </FrameLayout>
+            android:orientation="vertical">
 
-        <FrameLayout
-            android:id="@+id/yozakura_tile_clock"
-            android:layout_width="0dp"
-            android:layout_height="146dp"
-            android:layout_weight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/yozakura_tile_bg"
-            android:clipToOutline="true"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground">
-            <ImageView android:layout_width="34dp" android:layout_height="34dp"
-                android:layout_gravity="start|top" android:layout_margin="16dp"
-                android:src="@drawable/ic_yozakura_clock" android:tint="#FFFFFF"
-                android:contentDescription="@null"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_gravity="start|bottom" android:layout_margin="16dp"
-                android:text="@string/yozakura_clock_category"
-                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
-        </FrameLayout>
-    </LinearLayout>
+            <!-- Monet: the swatches are the live system accent ramp -->
+            <LinearLayout
+                android:id="@+id/yozakura_tile_monet"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="120"
+                android:layout_margin="5dp"
+                android:background="@drawable/yozakura_bento_tile"
+                android:clipToOutline="true"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/yozakura_monet_title"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="15sp" />
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="-19dp"
+                        android:background="@drawable/yozakura_swatch_1" />
+
+                    <View
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="-19dp"
+                        android:background="@drawable/yozakura_swatch_2" />
+
+                    <View
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="-19dp"
+                        android:background="@drawable/yozakura_swatch_3" />
+
+                    <View
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:background="@drawable/yozakura_swatch_4" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Wallpaper: shows the current wallpaper rather than an icon -->
+            <FrameLayout
+                android:id="@+id/yozakura_tile_wallpaper"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="200"
+                android:layout_margin="5dp"
+                android:background="@drawable/yozakura_bento_tile"
+                android:clipToOutline="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <org.yozakuraos.yozakuraparts.yozakura.WallpaperPreviewView
+                    android:id="@+id/yozakura_wallpaper_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12dp"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/yozakura_wallpaper_title"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:shadowColor="#B0000000"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="8" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Lock screen: wallpaper + a real clock, i.e. a preview of what it configures -->
         <FrameLayout
             android:id="@+id/yozakura_tile_lockscreen"
             android:layout_width="0dp"
-            android:layout_height="146dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/yozakura_tile_bg"
+            android:layout_margin="5dp"
+            android:background="@drawable/yozakura_bento_tile"
             android:clipToOutline="true"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground">
-            <ImageView android:layout_width="34dp" android:layout_height="34dp"
-                android:layout_gravity="start|top" android:layout_margin="16dp"
-                android:src="@drawable/ic_yozakura_lockscreen" android:tint="#FFFFFF"
-                android:contentDescription="@null"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_gravity="start|bottom" android:layout_margin="16dp"
-                android:text="@string/yozakura_lockscreen_category"
-                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
-        </FrameLayout>
 
-        <FrameLayout
-            android:id="@+id/yozakura_tile_power"
-            android:layout_width="0dp"
-            android:layout_height="146dp"
-            android:layout_weight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/yozakura_tile_bg"
-            android:clipToOutline="true"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground">
-            <ImageView android:layout_width="34dp" android:layout_height="34dp"
-                android:layout_gravity="start|top" android:layout_margin="16dp"
-                android:src="@drawable/ic_yozakura_power" android:tint="#FFFFFF"
-                android:contentDescription="@null"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_gravity="start|bottom" android:layout_margin="16dp"
-                android:text="@string/yozakura_power_category"
-                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:background="@drawable/yozakura_bento_tile_small"
+                android:clipToOutline="true">
+
+                <org.yozakuraos.yozakuraparts.yozakura.WallpaperPreviewView
+                    android:id="@+id/yozakura_lock_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <TextClock
+                    android:id="@+id/yozakura_lock_clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:format12Hour="h:mm"
+                    android:format24Hour="H:mm"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp"
+                    android:shadowColor="#B0000000"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="14dp"
+                    android:text="@string/yozakura_lockscreen_category"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:shadowColor="#B0000000"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="8" />
+            </FrameLayout>
         </FrameLayout>
     </LinearLayout>
 
+    <!-- Row B: two wide, short tiles -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="86dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
 
-        <FrameLayout
-            android:id="@+id/yozakura_tile_misc"
+        <LinearLayout
+            android:id="@+id/yozakura_tile_statusbar"
             android:layout_width="0dp"
-            android:layout_height="146dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/yozakura_tile_bg"
+            android:layout_margin="5dp"
+            android:background="@drawable/yozakura_bento_tile"
             android:clipToOutline="true"
+            android:gravity="center"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground">
-            <ImageView android:layout_width="34dp" android:layout_height="34dp"
-                android:layout_gravity="start|top" android:layout_margin="16dp"
-                android:src="@drawable/ic_yozakura_misc" android:tint="#FFFFFF"
-                android:contentDescription="@null"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_gravity="start|bottom" android:layout_margin="16dp"
-                android:text="@string/yozakura_misc_category"
-                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
-        </FrameLayout>
 
-        <FrameLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yozakura_statusbar_category"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/yozakura_tile_display"
             android:layout_width="0dp"
-            android:layout_height="146dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/yozakura_tile_bg"
+            android:layout_margin="5dp"
+            android:background="@drawable/yozakura_bento_tile"
             android:clipToOutline="true"
+            android:gravity="center"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground">
-            <ImageView android:layout_width="34dp" android:layout_height="34dp"
-                android:layout_gravity="start|top" android:layout_margin="16dp"
-                android:src="@drawable/ic_yozakura_display" android:tint="#FFFFFF"
-                android:contentDescription="@null"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_gravity="start|bottom" android:layout_margin="16dp"
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/yozakura_display_category"
-                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
-        </FrameLayout>
-
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="146dp"
-            android:layout_weight="1"
-            android:layout_margin="6dp"/>
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="15sp" />
+        </LinearLayout>
     </LinearLayout>
 
+    <!-- Row C: full width, label left, live clock right -->
     <LinearLayout
+        android:id="@+id/yozakura_tile_clock"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="94dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/yozakura_bento_tile"
+        android:clipToOutline="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="14"
+            android:gravity="center"
+            android:text="@string/yozakura_clock_category"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="15sp" />
 
         <FrameLayout
-            android:id="@+id/yozakura_tile_input"
             android:layout_width="0dp"
-            android:layout_height="146dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:layout_margin="16dp"
+            android:background="@drawable/yozakura_bento_tile_small"
+            android:clipToOutline="true">
+
+            <TextClock
+                android:id="@+id/yozakura_card_clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:format12Hour="h:mm"
+                android:format24Hour="H:mm"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="20sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Row D: three small square tiles, icon over label -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/yozakura_tile_power"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="6dp"
-            android:background="@drawable/yozakura_tile_bg"
+            android:layout_margin="5dp"
+            android:background="@drawable/yozakura_bento_tile_small"
             android:clipToOutline="true"
+            android:orientation="vertical"
+            android:gravity="center"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground">
-            <ImageView android:layout_width="34dp" android:layout_height="34dp"
-                android:layout_gravity="start|top" android:layout_margin="16dp"
-                android:src="@drawable/ic_yozakura_input" android:tint="#FFFFFF"
-                android:contentDescription="@null"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_gravity="start|bottom" android:layout_margin="16dp"
-                android:text="@string/yozakura_input_category"
-                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
-        </FrameLayout>
 
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_yozakura_power"
+                android:tint="?android:attr/textColorSecondary"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yozakura_power_category"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/yozakura_tile_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/yozakura_bento_tile_small"
+            android:clipToOutline="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_yozakura_input"
+                android:tint="?android:attr/textColorSecondary"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yozakura_input_category"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/yozakura_tile_misc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/yozakura_bento_tile_small"
+            android:clipToOutline="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_yozakura_misc"
+                android:tint="?android:attr/textColorSecondary"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yozakura_misc_category"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="12sp" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

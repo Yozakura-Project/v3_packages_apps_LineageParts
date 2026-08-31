@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 YozakuraOS
+     SPDX-License-Identifier: Apache-2.0
+
+     Neutral surface, not a gradient: the colour in a tile should come from its
+     content (wallpaper, Monet swatches, clock), otherwise every tile competes
+     with every other one. settingslib_preference_bg_color is what the rest of
+     Settings uses, so the sheet blends in and follows Monet.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/settingslib_preference_bg_color" />
+    <corners android:radius="28dp" />
+</shape>

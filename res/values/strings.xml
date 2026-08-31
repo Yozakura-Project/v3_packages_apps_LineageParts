@@ -893,4 +893,6 @@
     <string name="applock_hidden_list">Hidden apps</string>
     <string name="applock_hidden_list_summary">Behave as if these are not installed</string>
     <string name="applock_service_unavailable">The app lock service is not available on this build</string>
+    <!-- Bento sheet -->
+    <string name="yozakura_wallpaper_title">Wallpaper</string>
 </resources>

@@ -642,4 +642,5 @@
     <string name="applock_hidden_list">隠すアプリ</string>
     <string name="applock_hidden_list_summary">インストールされていないかのように振る舞います</string>
     <string name="applock_service_unavailable">この端末ではアプリロックのサービスを利用できません</string>
+    <string name="yozakura_wallpaper_title">壁紙</string>
 </resources>
