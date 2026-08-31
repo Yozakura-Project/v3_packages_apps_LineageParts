@@ -221,7 +221,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/yozakura_qs_header_title"
+                android:text="@string/yozakura_qs_category"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -295,7 +295,7 @@
                 android:layout_width="26dp"
                 android:layout_height="26dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/ic_yozakura_input"
+                android:src="@drawable/ic_settings_buttons"
                 android:tint="?android:attr/textColorSecondary"
                 android:contentDescription="@null" />
 
@@ -357,7 +357,7 @@
                 android:layout_width="26dp"
                 android:layout_height="26dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/ic_yozakura_misc"
+                android:src="@drawable/ic_yozakura_notification"
                 android:tint="?android:attr/textColorSecondary"
                 android:contentDescription="@null" />
 

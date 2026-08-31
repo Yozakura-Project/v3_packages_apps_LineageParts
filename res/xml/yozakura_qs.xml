@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 YozakuraOS
+     SPDX-License-Identifier: Apache-2.0
+
+     Quick Settings. These lived under Status bar, which meant the bento tile
+     for QS could only point at the header image screen. Split out so the tile
+     goes somewhere that matches its name.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="yozakura_qs"
+    android:title="@string/yozakura_qs_category">
+
+    <lineageos.preference.LineageSystemSettingListPreference
+        android:key="qs_quick_pulldown"
+        android:title="@string/status_bar_quick_qs_pulldown_title"
+        android:summary="%s"
+        android:entries="@array/status_bar_quick_qs_pulldown_entries"
+        android:entryValues="@array/status_bar_quick_qs_pulldown_values"
+        android:defaultValue="0" />
+
+    <org.yozakuraos.yozakuraparts.preference.SecureSettingListPreference
+        android:key="yozakura_qs_columns"
+        android:title="@string/yozakura_qs_columns_title"
+        android:summary="%s"
+        android:entries="@array/yozakura_qs_columns_entries"
+        android:entryValues="@array/yozakura_qs_columns_values"
+        android:defaultValue="0" />
+
+    <org.yozakuraos.yozakuraparts.preference.SecureSettingListPreference
+        android:key="yozakura_qqs_rows"
+        android:title="@string/yozakura_qqs_rows_title"
+        android:summary="%s"
+        android:entries="@array/yozakura_qqs_rows_entries"
+        android:entryValues="@array/yozakura_qqs_rows_values"
+        android:defaultValue="0" />
+
+    <lineageos.preference.LineageSecureSettingListPreference
+        android:key="qs_show_brightness_slider"
+        android:title="@string/status_bar_brightness_slider_title"
+        android:dialogTitle="@string/status_bar_brightness_slider_title"
+        android:entries="@array/status_bar_brightness_slider_entries"
+        android:entryValues="@array/status_bar_brightness_slider_values"
+        android:defaultValue="1"
+        android:summary="%s" />
+
+    <lineageos.preference.LineageSecureSettingListPreference
+        android:key="qs_brightness_slider_position"
+        android:title="@string/status_bar_brightness_slider_position_title"
+        android:dependency="qs_show_brightness_slider"
+        android:entries="@array/status_bar_brightness_slider_position_entries"
+        android:entryValues="@array/status_bar_brightness_slider_position_values"
+        android:defaultValue="0"
+        android:summary="%s" />
+
+    <lineageos.preference.LineageSecureSettingSwitchPreference
+        android:key="qs_show_auto_brightness"
+        android:title="@string/status_bar_brightness_slider_auto_title"
+        android:summary="@string/status_bar_brightness_slider_auto_summary"
+        android:dependency="qs_show_brightness_slider"
+        android:defaultValue="true" />
+
+    <!-- The header image has its own screen; reachable from here too. -->
+    <Preference
+        android:fragment="org.yozakuraos.yozakuraparts.yozakura.YozakuraQsHeaderFragment"
+        android:key="yozakura_qs_header"
+        android:title="@string/yozakura_qs_header_title"
+        android:summary="@string/yozakura_qs_header_summary" />
+
+</PreferenceScreen>

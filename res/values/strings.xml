@@ -895,4 +895,5 @@
     <string name="applock_service_unavailable">The app lock service is not available on this build</string>
     <!-- Bento sheet -->
     <string name="yozakura_wallpaper_title">Wallpaper</string>
+    <string name="yozakura_qs_category">Quick Settings</string>
 </resources>

@@ -45,7 +45,7 @@ public class YozakuraSettings extends SettingsPreferenceFragment {
         setFragmentTile(bento, R.id.yozakura_tile_statusbar,
                 PKG + ".yozakura.YozakuraStatusBarFragment");
         setFragmentTile(bento, R.id.yozakura_tile_qs,
-                PKG + ".yozakura.YozakuraQsHeaderFragment");
+                PKG + ".yozakura.YozakuraQsFragment");
         setFragmentTile(bento, R.id.yozakura_tile_clock,
                 PKG + ".yozakura.YozakuraClockFragment");
         setFragmentTile(bento, R.id.yozakura_tile_buttons,
