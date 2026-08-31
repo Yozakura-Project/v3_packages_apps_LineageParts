@@ -36,26 +36,30 @@ public class YozakuraSettings extends SettingsPreferenceFragment {
             return;
         }
 
-        // Category tiles.
-        setFragmentTile(bento, R.id.yozakura_tile_statusbar,
-                PKG + ".yozakura.YozakuraStatusBarFragment");
-        setFragmentTile(bento, R.id.yozakura_tile_clock,
-                PKG + ".yozakura.YozakuraClockFragment");
-        setFragmentTile(bento, R.id.yozakura_tile_lockscreen,
-                PKG + ".yozakura.YozakuraLockScreenFragment");
-        setFragmentTile(bento, R.id.yozakura_tile_power,
-                PKG + ".yozakura.YozakuraPowerFragment");
-        setFragmentTile(bento, R.id.yozakura_tile_misc,
-                PKG + ".yozakura.YozakuraMiscFragment");
-        setFragmentTile(bento, R.id.yozakura_tile_display,
-                PKG + ".yozakura.YozakuraDisplayFragment");
-        setFragmentTile(bento, R.id.yozakura_tile_input,
-                PKG + ".yozakura.YozakuraInputFragment");
-
-        // Monet lives under Display, but it is the tile people come here for, so
-        // it gets promoted onto the sheet with the live accent ramp on it.
+        // One card per destination, the way Infinity splits them, rather than a
+        // few tiles that each hide a submenu.
         setFragmentTile(bento, R.id.yozakura_tile_monet,
                 PKG + ".yozakura.YozakuraMonetFragment");
+        setFragmentTile(bento, R.id.yozakura_tile_lockscreen,
+                PKG + ".yozakura.YozakuraLockScreenFragment");
+        setFragmentTile(bento, R.id.yozakura_tile_statusbar,
+                PKG + ".yozakura.YozakuraStatusBarFragment");
+        setFragmentTile(bento, R.id.yozakura_tile_qs,
+                PKG + ".yozakura.YozakuraQsHeaderFragment");
+        setFragmentTile(bento, R.id.yozakura_tile_clock,
+                PKG + ".yozakura.YozakuraClockFragment");
+        setFragmentTile(bento, R.id.yozakura_tile_buttons,
+                PKG + ".input.ButtonSettings");
+        setFragmentTile(bento, R.id.yozakura_tile_power,
+                PKG + ".yozakura.YozakuraPowerFragment");
+        setFragmentTile(bento, R.id.yozakura_tile_notification,
+                PKG + ".notificationlight.NotificationLightSettings");
+        setFragmentTile(bento, R.id.yozakura_tile_input,
+                PKG + ".yozakura.YozakuraInputFragment");
+        setFragmentTile(bento, R.id.yozakura_tile_display,
+                PKG + ".yozakura.YozakuraDisplayFragment");
+        setFragmentTile(bento, R.id.yozakura_tile_misc,
+                PKG + ".yozakura.YozakuraMiscFragment");
 
         // Wallpaper is the system picker, not one of our screens.
         setTileClick(bento, R.id.yozakura_tile_wallpaper, new View.OnClickListener() {

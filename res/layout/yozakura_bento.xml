@@ -206,7 +206,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/yozakura_tile_display"
+            android:id="@+id/yozakura_tile_qs"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -221,7 +221,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/yozakura_display_category"
+                android:text="@string/yozakura_qs_header_title"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -270,12 +270,43 @@
         </FrameLayout>
     </LinearLayout>
 
-    <!-- Row D: three small square tiles, icon over label -->
+    <!-- Row D: buttons / power menu / notifications -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="112dp"
         android:orientation="horizontal"
         android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/yozakura_tile_buttons"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/yozakura_bento_tile_small"
+            android:clipToOutline="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_yozakura_input"
+                android:tint="?android:attr/textColorSecondary"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/button_pref_title"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="12sp" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/yozakura_tile_power"
@@ -302,10 +333,50 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/yozakura_power_category"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="12sp" />
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/yozakura_tile_notification"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/yozakura_bento_tile_small"
+            android:clipToOutline="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_yozakura_misc"
+                android:tint="?android:attr/textColorSecondary"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/notification_light_title"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Row E: input / display / everything else -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:id="@+id/yozakura_tile_input"
@@ -332,7 +403,39 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/yozakura_input_category"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/yozakura_tile_display"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/yozakura_bento_tile_small"
+            android:clipToOutline="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_yozakura_display"
+                android:tint="?android:attr/textColorSecondary"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/yozakura_display_category"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="12sp" />
         </LinearLayout>
@@ -362,6 +465,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/yozakura_misc_category"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="12sp" />
