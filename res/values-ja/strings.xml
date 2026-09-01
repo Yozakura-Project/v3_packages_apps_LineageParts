@@ -644,4 +644,7 @@
     <string name="applock_service_unavailable">この端末ではアプリロックのサービスを利用できません</string>
     <string name="yozakura_wallpaper_title">壁紙</string>
     <string name="yozakura_qs_category">クイック設定</string>
+    <string name="yozakura_display_category">ディスプレイ</string>
+    <string name="yozakura_input_category">入力</string>
+    <string name="yozakura_monet_title">Monet エンジン</string>
 </resources>

@@ -9,22 +9,27 @@
 -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="76dp"
+    android:layout_height="wrap_content"
     android:layout_marginStart="15dp"
     android:layout_marginEnd="15dp"
     android:background="@drawable/yozakura_banner_rounded"
     android:clipToOutline="true">
 
+    <!-- The height lives here, not on the root: SettingsLib's LayoutPreference
+         re-parents the inflated view with its own LayoutParams and drops the
+         root's layout_height, so the root would fall back to wrap_content and
+         this ImageView would render at the banner's intrinsic aspect (measured
+         342dp instead of 76dp). -->
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="76dp"
         android:scaleType="centerCrop"
         android:src="@drawable/yozakura_banner_bg"
         android:contentDescription="@null" />
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="76dp"
         android:background="@drawable/yozakura_header_overlay" />
 
     <LinearLayout

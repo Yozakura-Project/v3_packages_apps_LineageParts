@@ -47,7 +47,7 @@ public class WallpaperPreviewView extends ImageView {
 
     private static final long ANIMATION_DURATION_MS = 60000L;
     private static final float ZOOM_FACTOR = 1.5f;
-    private static final float DIM_ALPHA = 0.2f;
+    private static final float DIM_ALPHA = 0.1f;
 
     private final Paint mPaint = new Paint();
     private final Paint mDimPaint = new Paint();
