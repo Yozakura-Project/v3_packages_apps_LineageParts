@@ -107,17 +107,21 @@
                     android:layout_margin="12dp"
                     android:scaleType="centerCrop" />
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/yozakura_tile_scrim" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="26dp"
                     android:text="@string/yozakura_wallpaper_title"
                     android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:shadowColor="#B0000000"
-                    android:shadowDx="0"
-                    android:shadowDy="0"
-                    android:shadowRadius="8" />
+                    android:textSize="14sp" />
             </FrameLayout>
         </LinearLayout>
 
@@ -155,11 +159,17 @@
                     android:format12Hour="h:mm"
                     android:format24Hour="H:mm"
                     android:textColor="#FFFFFF"
-                    android:textSize="34sp"
-                    android:shadowColor="#B0000000"
+                    android:textSize="30sp"
+                    android:shadowColor="#80000000"
                     android:shadowDx="0"
                     android:shadowDy="0"
-                    android:shadowRadius="10" />
+                    android:shadowRadius="12" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/yozakura_tile_scrim" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -168,11 +178,7 @@
                     android:layout_marginBottom="14dp"
                     android:text="@string/yozakura_lockscreen_category"
                     android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:shadowColor="#B0000000"
-                    android:shadowDx="0"
-                    android:shadowDy="0"
-                    android:shadowRadius="8" />
+                    android:textSize="14sp" />
             </FrameLayout>
         </FrameLayout>
     </LinearLayout>
@@ -295,7 +301,7 @@
                 android:layout_width="26dp"
                 android:layout_height="26dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/ic_settings_buttons"
+                android:src="@drawable/ic_yozakura_buttons"
                 android:tint="?android:attr/textColorSecondary"
                 android:contentDescription="@null" />
 
@@ -365,7 +371,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/notification_light_title"
+                android:text="@string/yozakura_notification_title"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="12sp" />
         </LinearLayout>

@@ -896,4 +896,5 @@
     <!-- Bento sheet -->
     <string name="yozakura_wallpaper_title">Wallpaper</string>
     <string name="yozakura_qs_category">Quick Settings</string>
+    <string name="yozakura_notification_title">Notifications</string>
 </resources>

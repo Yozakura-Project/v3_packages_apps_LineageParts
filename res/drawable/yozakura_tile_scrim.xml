@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 YozakuraOS
+     SPDX-License-Identifier: Apache-2.0
+
+     Labels sit on top of a wallpaper that pans for 60 seconds, so whether they
+     are readable changes minute to minute. A text shadow is not enough - it was
+     losing against the sakura in the lock tile. This puts a scrim under the
+     label band instead, so legibility no longer depends on where the pan is.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:type="linear"
+        android:angle="90"
+        android:startColor="#B3000000"
+        android:centerColor="#59000000"
+        android:endColor="#00000000" />
+</shape>

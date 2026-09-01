@@ -33,6 +33,7 @@ import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.ParcelFileDescriptor;
+import android.provider.Settings;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -191,9 +192,24 @@ public class WallpaperPreviewView extends ImageView {
                 mWallpaper.getHeight() / ZOOM_FACTOR);
     }
 
+    /**
+     * Honour the system animation setting. With animations off the pan is just
+     * battery use the user has already said they do not want; the still frame
+     * reads the same.
+     */
+    private boolean animationsEnabled() {
+        return Settings.Global.getFloat(getContext().getContentResolver(),
+                Settings.Global.ANIMATOR_DURATION_SCALE, 1f) > 0f;
+    }
+
     private void startAnimation() {
         stopAnimation();
         if (mWallpaper == null || getWidth() <= 0 || getHeight() <= 0) {
+            return;
+        }
+        if (!animationsEnabled()) {
+            resetViewport();
+            invalidate();
             return;
         }
 
