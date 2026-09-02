@@ -15,4 +15,14 @@
         android:key="touchscreen_gesture_settings"
         android:title="@string/touchscreen_gesture_settings_title" />
 
+    <!-- YozakuraOS cp122d: expose pocket mode. The framework side (PocketService,
+         PhoneWindowManager, PocketLock) landed in cp122a/cp122b but had no UI, so the
+         only way to turn it on was adb. pocket_judge lives in AOSP Settings.System,
+         hence SystemSettingSwitchPreference and not the Lineage* variant. -->
+    <lineageos.preference.SystemSettingSwitchPreference
+        android:key="pocket_judge"
+        android:title="@string/pocket_judge_title"
+        android:summary="@string/pocket_judge_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>

@@ -897,4 +897,8 @@
     <string name="yozakura_wallpaper_title">Wallpaper</string>
     <string name="yozakura_qs_category">Quick Settings</string>
     <string name="yozakura_notification_title">Notifications</string>
+    <!-- YozakuraOS cp122d: pocket mode -->
+    <string name="pocket_judge_title">Pocket detection</string>
+    <string name="pocket_judge_summary">Use the proximity and light sensors to tell when the phone is in a pocket or bag, and ignore touches and button presses until it comes back out</string>
+
 </resources>
